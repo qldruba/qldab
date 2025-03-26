@@ -145,6 +145,12 @@ nav ul li a {
     font-size: 23PX;
     font-style: bold;
 }
+
+@media (max-width: 576px) {
+    .intro-text {
+      font-size: 1.8rem;
+    }
+    }
 .intro-text:hover{
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
@@ -1632,3 +1638,30 @@ footer h2:hover,
     color: #3a8dde; /* لون الأيقونات عند التمرير */
     transform: scale(1.2);
 }
+/* إصلاحات الجوال - تطبق على شاشات أقل من 768px */
+@media (max-width: 767px) {
+    /* حل مشكلة التداخل العام */
+    body {
+      overflow-x: hidden; /* يمنع التمرير الأفقي غير المرغوب فيه */
+      width: 100% !important;
+    }
+    
+    /* إصلاح العناصر المتداخلة */
+    .container, .section, .div {
+      width: 100% !important;
+      float: none !important;
+      margin: 0 !important;
+      padding: 10px !important;
+    }
+    
+    /* إصلاح الصور */
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    
+    /* إصلاح القوائم */
+    nav ul {
+      flex-direction: column !important;
+    }
+  }
