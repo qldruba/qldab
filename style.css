@@ -83,6 +83,84 @@ nav ul li a {
     color: white;
 }
 
+/* تنسيق القائمة المنسدلة للجوال */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: linear-gradient(180deg, #234158, #c7dff2);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+        transition: right 0.5s ease-in-out;
+        z-index: 999;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.4s ease;
+    }
+    
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .nav-links li:nth-child(1) { transition-delay: 0.2s; }
+    .nav-links li:nth-child(2) { transition-delay: 0.3s; }
+    .nav-links li:nth-child(3) { transition-delay: 0.4s; }
+    .nav-links li:nth-child(4) { transition-delay: 0.5s; }
+    .nav-links li:nth-child(5) { transition-delay: 0.6s; }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        display: block;
+        text-align: center;
+    }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-toggle.active {
+        transform: rotate(90deg);
+    }
+    
+    /* طبقة التعتيم عند فتح القائمة */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
