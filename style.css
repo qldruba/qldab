@@ -163,6 +163,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
+    margin-top: auto;
     position: relative;
     height: 100vh;
     overflow: visible;
@@ -183,10 +184,10 @@ nav ul li a {
 
 .hero-text {
     position: absolute;
-    top: 10px; /* تعديل الموقع إلى أعلى الزاوية اليسرى */
+    top: 10px; 
     left: 10px;
-    text-align: left; /* تعديل النص ليكون بمحاذاة اليسار */
-    color: white; /* جعل النص باللون الأبيض */
+    text-align: left; 
+    color: white; 
 }
 
 .hero-text h1 {
@@ -199,9 +200,9 @@ nav ul li a {
 }
 
 .small-image {
-    width: 30px; /* تصغير عرض الصورة */
+    width: 30px; 
     height: auto;
-    margin-top: 0px; /* إضافة مسافة صغيرة بين النص والصورة */
+    margin-top: 0px; 
  
 }
 
@@ -224,11 +225,6 @@ nav ul li a {
     font-style: bold;
 }
 
-@media (max-width: 576px) {
-    .intro-text {
-      font-size: 1.8rem;
-    }
-    }
 .intro-text:hover{
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
@@ -248,6 +244,75 @@ nav ul li a {
     width: 100%;
     border-radius: 300px;
 }
+@media only screen and (max-width: 768px) {
+    /* تحسين مسافة الهيرو سكشن */
+    #home {
+        margin-bottom: 20px; /* هامش صغير فقط */
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .intro {
+        padding: 40px;
+        margin-top: 0;
+    }
+    
+    .intro-text {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .intro {
+        padding: 30px;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    
+    .intro-text, .intro-image {
+        width: 80%;
+        text-align: center;
+    }
+    
+    .intro-image {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .intro {
+        padding: 25px;
+        margin-top: 120px;
+    }
+    
+    .intro-text, .intro-image {
+        width: 90%;
+    }
+    
+    .intro-text {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .intro {
+        padding: 20px;
+        margin-top: 100px;
+    }
+    
+    .intro-text, .intro-image {
+        width: 95%;
+    }
+    
+    .intro-text {
+        font-size: 16px;
+    }
+    
+    .intro-image img {
+        border-radius: 150px;
+    }
+}
 
 /* About Us Section */
 #about {
@@ -264,8 +329,6 @@ nav ul li a {
     font-size: 60px;
     color: #116378;
     font-style: bold;
-
-
 }
 
 #about h1:hover{
@@ -318,7 +381,77 @@ nav ul li a {
     background-color: #ccc;
     transform: translateY(-3px);
 }
+/* ========== Media Queries for About Us Section ========== */
+@media only screen and (max-width: 1200px) {
+    #about {
+        padding: 40px;
+    }
+    .about-content p {
+        font-size: 22px;
+    }
+}
 
+@media only screen and (max-width: 992px) {
+    #about {
+        padding: 30px;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-content img {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    .about-content p {
+        width: 80%;
+        font-size: 20px;
+    }
+    #about h1 {
+        margin-left: 0;
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #about {
+        padding: 25px;
+    }
+    .about-content img {
+        width: 60%;
+    }
+    .about-content p {
+        width: 90%;
+        font-size: 18px;
+    }
+    #about h1 {
+        font-size: 40px;
+    }
+    .read-more {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #about {
+        padding: 20px;
+    }
+    .about-content img {
+        width: 80%;
+    }
+    .about-content p {
+        width: 100%;
+        font-size: 16px;
+    }
+    #about h1 {
+        font-size: 32px;
+    }
+    .read-more {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
 /* Video Section */
 .video-section {
     position: relative;
@@ -389,19 +522,6 @@ nav ul li a {
     background: linear-gradient(to right, #e1e3e4, #d3dde3);
     align-items: stretch;
 }
-
-@media (max-width: 992px) {
-    .services-container {
-      grid-template-columns: repeat(2, 1fr);  /* عمودين */
-    }
-  }
-  
-  /* للهاتف */
-  @media (max-width: 768px) {
-    .services-container {
-      grid-template-columns: 1fr;  /* عمود واحد (عمودي بالكامل) */
-    }
-  }
 
 .service {
     width: 30%;
@@ -476,18 +596,6 @@ nav ul li a {
     margin-top: 15px;
 }
 
-@media (max-width: 992px) {
-    .ser-container {
-      grid-template-columns: repeat(2, 1fr);  /* عمودين */
-    }
-  }
-  
-  /* للهاتف */
-  @media (max-width: 768px) {
-    .ser-container {
-      grid-template-columns: 1fr;  /* عمود واحد (عمودي بالكامل) */
-    }
-  }
 
 .serv {
     width: 30%;
@@ -521,7 +629,83 @@ nav ul li a {
     margin-top: 20px;
 }
 
+/* ========== Media Queries for Services Section ========== */
+@media only screen and (max-width: 1200px) {
+    #services {
+        padding: 40px;
+    }
+    .text_ser, .text_ser1 {
+        padding: 40px;
+        font-size: large;
+    }
+}
 
+@media only screen and (max-width: 992px) {
+    #services {
+        padding: 30px;
+    }
+    .services-container, .ser-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service, .serv {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    .text_ser, .text_ser1 {
+        padding: 30px;
+        font-size: medium;
+    }
+    .text_ser h1, .text_ser1 h1 {
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #services {
+        padding: 25px;
+    }
+    .service, .serv {
+        width: 90%;
+    }
+    .text_ser, .text_ser1 {
+        padding: 25px;
+        font-size: small;
+    }
+    .text_ser h1, .text_ser1 h1 {
+        font-size: large;
+    }
+    .gallery-container {
+        flex-direction: column;
+    }
+    .gallery-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #services {
+        padding: 20px;
+    }
+    .service, .serv {
+        width: 100%;
+    }
+    .text_ser, .text_ser1 {
+        padding: 20px;
+        font-size: smaller;
+    }
+    .text_ser h1, .text_ser1 h1 {
+        font-size: medium;
+    }
+    .read-more {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .gallery-item img {
+        width: 100%;
+    }
+}
 /* Gallery Section */
 #gallery2 {
     display: flex;
@@ -636,7 +820,85 @@ form button:hover {
         transform: translateY(0);
     }
     
+/* ========== Media Queries for Contact Section ========== */
+@media only screen and (max-width: 1200px) {
+    #contact {
+        padding: 40px;
+    }
+    .contact_text {
+        padding: 40px;
+        font-size: x-large;
+    }
+}
 
+@media only screen and (max-width: 992px) {
+    #contact {
+        padding: 30px;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    form, .contact-info {
+        width: 80%;
+        margin: 0 auto 30px;
+    }
+    .contact_text {
+        padding: 30px;
+        font-size: large;
+    }
+    #tell {
+        margin: 30px;
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #contact {
+        padding: 25px;
+    }
+    form, .contact-info {
+        width: 90%;
+    }
+    .contact_text {
+        padding: 25px;
+        font-size: medium;
+    }
+    #tell {
+        margin: 20px;
+        font-size: large;
+    }
+    .footer-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .icon-link {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #contact {
+        padding: 20px;
+    }
+    form, .contact-info {
+        width: 100%;
+    }
+    .contact_text {
+        padding: 20px;
+        font-size: small;
+    }
+    #tell {
+        margin: 15px;
+        font-size: medium;
+    }
+    form input, form textarea {
+        padding: 8px;
+    }
+    form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
 
 /* Map Section */
 .map {
@@ -722,25 +984,6 @@ form button:hover {
     background: #8cabea;
     transform: translateY(-3px);
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-    
-    .image img {
-        width: 100%;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
     
 /* تنسيق القسم العام */
 .about-us-section {
@@ -954,6 +1197,190 @@ form button:hover {
         font-size: xx-large;
         font-style: bold;
     }
+/* General Responsive Adjustments */
+.responsive-section {
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .responsive-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* ========== Responsive Adjustments for All Sections ========== */
+@media only screen and (max-width: 1200px) {
+    /* About Us First Section */
+    .about-us .container {
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .image img {
+        width: 300px;
+    }
+    
+    /* About Us Video Section */
+    .about-us-section {
+        flex-direction: column;
+    }
+    
+    .about-us-left, .about-us-right {
+        flex: 1 1 100%;
+    }
+    
+    /* Partners Grid */
+    .photo-ab-row {
+        flex-wrap: wrap;
+    }
+    
+    .photo-ab-item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* About Us First Section */
+    .about-us .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .image img {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .content {
+        max-width: 100%;
+    }
+    
+    /* Video Section */
+    .about-us-left {
+        min-height: 300px;
+    }
+    
+    /* Partners Grid */
+    .photo-ab-img {
+        width: 250px;
+        height: 200px;
+    }
+    
+    /* Text Sections */
+    .about3, .text-aboutus {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* General Padding */
+    .about-us, .about-us-section, .about3, .photo-ab-section, .text-aboutus {
+        padding: 20px 15px;
+    }
+    
+    /* Video Section */
+    .about-us-left h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about-us-right h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Partners Grid */
+    .photo-ab-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .photo-ab-item {
+        width: 80%;
+    }
+    
+    .photo-ab-img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+    }
+    
+    /* Text Sections */
+    .about3 h1, .text-aboutus h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about3 p, .text-aboutus p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* About Us First Section */
+    .about-us .container {
+        padding: 20px;
+    }
+    
+    /* Video Section */
+    .about-us-left {
+        min-height: 250px;
+    }
+    
+    .about-us-left h1 {
+        font-size: 1.5rem;
+    }
+    
+    .about-us-right h2 {
+        font-size: 1.3rem;
+    }
+    
+    .about-us-text {
+        font-size: 1rem;
+    }
+    
+    /* Partners Grid */
+    .photo-ab-item {
+        width: 100%;
+    }
+    
+    /* Text Sections */
+    .about3, .text-aboutus {
+        padding: 1.5rem 1rem;
+        margin: 30px auto;
+    }
+    
+    .about3 h1, .text-aboutus h1 {
+        font-size: 1.5rem;
+    }
+    
+    .read-more {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+/* Final Overlap Prevention */
+@media only screen and (max-width: 768px) {
+    section, div[class*="section"] {
+        margin-bottom: 30px !important;
+        scroll-margin-top: 80px; /* لمنع التداخل مع الهيدر الثابت */
+    }
+    
+    .about-us-section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about-us-left, .about-us-right {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    
+    .photo-ab-section {
+        padding: 15px 10px;
+    }
+}
+
 /* contact page */ 
 /* General Page Styling */
 
@@ -1197,7 +1624,105 @@ form button:hover {
     font-size: 20px;
     color: #333;
 }
+/* ========== Responsive Adjustments for Join Us Section ========== */
+@media only screen and (max-width: 1200px) {
+    .contentjo h1 {
+        font-size: 2.2rem;
+    }
+    
+    .contentjo p {
+        font-size: 1.1rem;
+    }
+    
+    .team-image {
+        max-width: 250px;
+    }
+}
 
+@media only screen and (max-width: 992px) {
+    .containerj {
+        flex-direction: column;
+    }
+    
+    .contentjo, .image {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .contentjo p {
+        width: 100% !important;
+    }
+    
+    .recruitment-title, .recruitment-subtitle {
+        margin-left: 0 !important;
+        font-size: 2rem !important;
+    }
+    
+    .recruitment-description {
+        font-size: 1rem !important;
+    }
+    
+    .teams-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #join-us {
+        padding: 30px 15px;
+    }
+    
+    .contentjo h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .recruitment-title, .recruitment-subtitle {
+        font-size: 1.8rem !important;
+    }
+    
+    .containerj, .recruitment-section, .contact-container1 {
+        padding: 30px;
+    }
+    
+    .team {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .contentjo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .contentjo p {
+        font-size: 1rem;
+    }
+    
+    .recruitment-title, .recruitment-subtitle {
+        font-size: 1.5rem !important;
+    }
+    
+    .containerj, .recruitment-section, .contact-container1 {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    form input,
+    form textarea {
+        padding: 12px;
+    }
+    
+    form button {
+        padding: 12px 25px;
+    }
+}
 
     /*order style*/
  /*order style*/
@@ -1303,139 +1828,143 @@ input[type="text"], input[type="number"], select {
 }
 
 /*  ser1 page */
-
-.serv1_pg {
+/* Base Styles for Service Sections */
+.serv1_pg, .serv1_pg2 {
     display: flex;
-    flex-wrap: wrap; /* يسمح للقسم بالتوسع مع المحتوى */
     width: 100%;
-    justify-content: center;
     padding: 50px 20px;
     background: linear-gradient(to right, #84afdb, #9aaeba);
     align-items: stretch;
-    min-height: auto; /* تغيير من 100vh إلى auto */
-    flex: 1;
+    margin-bottom: 30px;
 }
 
-.serv1-left {
-    flex: 1.7; 
+.serv1-left, .serv1-right2 {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
     position: relative;
-    width: 100%;
-    min-height: 400px; /* ارتفاع أدنى بدلًا من 100vh */
+    min-height: 400px;
 }
 
+.serv1-right, .serv1-left2 {
+    flex: 2;
+    padding: 40px;
+    background-color: white;
+}
 
-.serv1-left h1 {
-    position: relative; /* لضمان ظهور العنوان فوق الفيديو */
-    z-index: 2;
+.serv1-left h1, .serv1-right2 h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-}
-/* text in img */
-.serv1-left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* يجعل الفيديو يغطي القسم بالكامل */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-/* القسم النصي في اليمين */
-.serv1-right {
-    text-align: center;
-    flex: 2.3; /* يجعل القسم الأيمن يأخذ ضعف حجم القسم الأيسر */
-    padding: 20px;
-    background-color: white;
-    overflow-y: auto;
-    display: inline-block;
-
-}
-
-/* تنسيق النصوص */
-.serv1-right h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #1e3a8a;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: bold;
-    margin-top: 10px;
-
-}
-.serv1-right-text {
-    font-size: 25px;
-    color: #374151;
-    line-height: 1.6;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: bold;
-}
-
-/*tow*/
-.serv1_pg2 {
-    display: flex;
-    flex-wrap: wrap; /* يسمح للقسم بالتوسع مع المحتوى */
-    width: 100%;
-    justify-content: center;
-    background: linear-gradient(to right, #84afdb, #9aaeba);
-    padding: 50px 20px;
-    align-items: stretch;
-    min-height: auto; /* تغيير من 100vh إلى auto */
-    flex: 1;
-   
-}
-
-.serv1-right2 {
-    flex: 1.7; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+    z-index: 2;
     position: relative;
-    width: 100%;
-
+    text-align: center;
 }
-.serv1-right2 img {
+
+.image_sr2 img, .image_sr3 img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-} 
-.serv1-left2 {
-    text-align: center;
-    flex: 2.3; 
-    padding: 20px;
-    background-color: white;
-    overflow-y: auto;
-    display: inline-block;
-
 }
 
-/* تنسيق النصوص */
-.serv1-left2 h2 {
-    font-size: 30px;
-    font-weight: bold;
+.serv1-right h2, .serv1-left2 h2 {
+    font-size: 2rem;
     color: #1e3a8a;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: bold;
-    margin-top: 10px;
-
+    margin-bottom: 20px;
+    text-align: center;
 }
-.serv1-right-text2 {
-    font-size: 25px;
+
+.serv1-right-text, .serv1-right-text2 {
+    font-size: 1.2rem;
     color: #374151;
     line-height: 1.6;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: bold;
+    text-align: center;
+}
+.serv1_pg, .serv1_pg2,
+.serv1-left, .serv1-right,
+.serv1-left2, .serv1-right2 {
+    transition: all 0.3s ease;
+}
+/* ========== Responsive Adjustments ========== */
+@media only screen and (max-width: 1200px) {
+    .serv1-left h1, .serv1-right2 h1 {
+        font-size: 2.2rem;
+    }
+    
+    .serv1-right h2, .serv1-left2 h2 {
+        font-size: 1.8rem;
+    }
+    
+    .serv1-right-text, .serv1-right-text2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .serv1_pg, .serv1_pg2 {
+        flex-direction: column;
+    }
+    
+    .serv1_pg2 {
+        flex-direction: column-reverse;
+    }
+    
+    .serv1-left, .serv1-right, 
+    .serv1-left2, .serv1-right2 {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    
+    .serv1-left, .serv1-right2 {
+        min-height: 300px;
+    }
+    
+    .serv1-right, .serv1-left2 {
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .serv1_pg, .serv1_pg2 {
+        padding: 30px 15px;
+    }
+    
+    .serv1-left h1, .serv1-right2 h1 {
+        font-size: 1.8rem;
+    }
+    
+    .serv1-right h2, .serv1-left2 h2 {
+        font-size: 1.5rem;
+    }
+    
+    .serv1-right-text, .serv1-right-text2 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .serv1-left, .serv1-right2 {
+        min-height: 250px;
+    }
+    
+    .serv1-left h1, .serv1-right2 h1 {
+        font-size: 1.5rem;
+    }
+    
+    .serv1-right, .serv1-left2 {
+        padding: 20px;
+    }
+    
+    .serv1-right h2, .serv1-left2 h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
 }
 
 /*serv3 page */
@@ -1528,53 +2057,136 @@ input[type="text"], input[type="number"], select {
 /*service 1 page*/
 #service1_pg{
     background: linear-gradient(135deg, #3a8dde, #ffffff);
+    padding: 20px 0;
 }
 
 .image-text-section1{
     width: 100%;
-    max-width: 1200px; /* تحديد عرض máximo للسكشن */
-    margin: 0 auto; /* توسيط السكشن */
-    padding: 40px 20px; /* تباعد داخلي */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
     background-color: whitesmoke;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .row {
     display: flex;
-    align-items: center; /* توسيط العناصر عموديًا */
-    gap: 40px; /* الفارق بين الصورة والنص */
-    margin-bottom: 60px; /* تباعد بين الصفوف */
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
 .row.reverse {
     flex-direction: row-reverse; /* عكس الترتيب للصف الثاني */
 }
 
-.image-container1 {
-    flex: 1; /* جعل الصورة تأخذ مساحة متساوية */
+.image-container1, 
+.text-container-service_pg {
+    flex: 1;
+    min-width: 0; /* يمنع العناصر من التمدد خارج الحدود */
 }
 
 .image-container1 img {
-    width: 100%; /* جعل الصورة تشغل المساحة الكاملة */
-    height: auto; /* الحفاظ على نسبة الطول إلى العرض */
-    border-radius: 8px; /* زوايا مدورة */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
-
-.text-container-service_pg {
-    flex: 1; /* جعل النص يأخذ مساحة متساوية */
+.image-container1 img:hover {
+    transform: scale(1.02);
 }
 
 .text-container-service_pg h2 {
-    font-size: 24px;
+    font-size: 28px;
     color: #116378;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .text-container-service_pg p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* ========== Responsive Adjustments ========== */
+@media only screen and (max-width: 1200px) {
+    .row {
+        gap: 30px;
+    }
+    
+    .text-container-service_pg h2 {
+        font-size: 26px;
+    }
+    
+    .text-container-service_pg p {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .image-text-section1 {
+        padding: 30px 15px;
+    }
+    
+    .row, .row.reverse {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .image-container1, 
+    .text-container-service_pg {
+        width: 100%;
+    }
+    
+    .text-container-service_pg h2 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .image-text-section1 {
+        padding: 25px 10px;
+    }
+    
+    .row {
+        margin-bottom: 40px;
+    }
+    
+    .text-container-service_pg h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .text-container-service_pg p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #service1_pg {
+        padding: 10px 0;
+    }
+    
+    .image-text-section1 {
+        padding: 20px 10px;
+    }
+    
+    .row {
+        margin-bottom: 30px;
+        gap: 20px;
+    }
+    
+    .text-container-service_pg h2 {
+        font-size: 22px;
+    }
+    
+    .text-container-service_pg p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
 }
 
 /* service 2 page */
@@ -1623,7 +2235,57 @@ input[type="text"], input[type="number"], select {
     height: auto; /* الحفاظ على نسبة الطول إلى العرض */
     border-radius: 8px; /* زوايا مدورة */
 }
+/* Media Queries للتجاوب مع الشاشات الصغيرة */
+@media only screen and (max-width: 1024px) {
+    .content-wrapper30 {
+        max-width: 90%; /* تقليل العرض الأقصى للشاشات المتوسطة */
+        padding: 0 20px; /* إضافة بعض المساحة الجانبية */
+    }
+}
 
+@media only screen and (max-width: 768px) {
+    .content-wrapper30 {
+        flex-direction: column; /* تغيير اتجاه العناصر إلى عمودي */
+        text-align: center; /* توسيط النص */
+    }
+    
+    .text-container30 {
+        padding-right: 0; /* إزالة المساحة الجانبية للنص */
+        padding-bottom: 30px; /* إضافة مساحة أسفل النص */
+    }
+    
+    .text-container30 h2 {
+        font-size: 28px; /* تصغير حجم العناوين */
+        margin-bottom: 15px;
+    }
+    
+    .text-container30 p {
+        font-size: 18px; /* تصغير حجم النص */
+    }
+    
+    .image-container30 {
+        width: 80%; /* تقليل عرض الصورة */
+        margin: 0 auto; /* توسيط الصورة */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .full-width-section {
+        padding: 40px 0; /* تقليل المساحة الداخلية */
+    }
+    
+    .text-container30 h2 {
+        font-size: 24px; /* تصغير حجم العناوين أكثر */
+    }
+    
+    .text-container30 p {
+        font-size: 16px; /* تصغير حجم النص أكثر */
+    }
+    
+    .image-container30 {
+        width: 95%; /* زيادة عرض الصورة لتملأ المساحة */
+    }
+}
 /* service 3 page */
 #service3_pg{
     background: linear-gradient(135deg, #3a8dde, #ffffff);
@@ -1649,6 +2311,10 @@ input[type="text"], input[type="number"], select {
 
 .image-container3 {
     flex: 1; /* جعل الصورة تأخذ مساحة متساوية */
+    overflow: hidden; /* لإخفاء أي جزء زائد من الصورة */
+    border-radius: 8px; /* زوايا مدورة للصورة */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* إضافة ظل خفيف */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* حركة سلسة */
 }
 
 .image-container3 img {
@@ -1663,6 +2329,10 @@ input[type="text"], input[type="number"], select {
 
 .text-container-service_pg {
     flex: 1; /* جعل النص يأخذ مساحة متساوية */
+    transition: all 0.3s ease; /* حركة سلسة للنص */
+    padding: 15px; /* إضافة مساحة داخلية */
+    border-radius: 8px; /* زوايا مدورة */
+    background-color: rgba(255,255,255,0.8); /* خلفية شبه شفافة */
 }
 .text-container-service_pg:hover{
     transform: scale(1.05);
@@ -1687,6 +2357,86 @@ input[type="text"], input[type="number"], select {
     line-height: 1.6;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+/* تأثيرات عند التحويم (لشاشات الكمبيوتر فقط) */
+@media only screen and (min-width: 769px) {
+    .image-container3:hover {
+        transform: scale(1.03); /* تكبير بسيط للصورة */
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* زيادة الظل */
+    }
+    
+    .text-container-service_pg:hover {
+        background-color: rgba(255,255,255,0.95); /* زيادة وضوح الخلفية */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* إضافة ظل */
+    }
+}
+
+/* Media Queries للتجاوب مع الشاشات الصغيرة */
+@media only screen and (max-width: 1024px) {
+    .image-text-section3 {
+        max-width: 90%; /* تقليل العرض الأقصى للشاشات المتوسطة */
+        padding: 30px 15px; /* تعديل المساحة الداخلية */
+    }
+    
+    .row, .row.reverse {
+        gap: 30px; /* تقليل المسافة بين الصورة والنص */
+        margin-bottom: 50px; /* تقليل التباعد بين الصفوف */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .row, .row.reverse {
+        flex-direction: column; /* تغيير اتجاه العناصر إلى عمودي */
+        gap: 25px; /* تقليل المسافة بين العناصر */
+    }
+    
+    .image-container3, 
+    .text-container-service_pg {
+        width: 100%; /* جعل العناصر تشغل العرض الكامل */
+    }
+    
+    .text-container-service_pg {
+        text-align: center; /* توسيط النص */
+    }
+    
+    .text-container-service_pg h1,
+    .text-container-service_pg h2 {
+        font-size: 22px; /* تصغير حجم العناوين */
+    }
+    
+    .text-container-service_pg p {
+        font-size: 15px; /* تصغير حجم النص */
+    }
+    
+    .image-container3:hover,
+    .text-container-service_pg:hover {
+        transform: none; /* إزالة تأثير التكبير عند التحويم في الشاشات الصغيرة */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .image-text-section3 {
+        padding: 20px 10px; /* تقليل المساحة الداخلية أكثر */
+    }
+    
+    .row, .row.reverse {
+        margin-bottom: 40px; /* تقليل التباعد بين الصفوف أكثر */
+    }
+    
+    .text-container-service_pg h1 {
+        font-size: 20px; /* تصغير حجم العنوان الرئيسي */
+    }
+    
+    .text-container-service_pg h2 {
+        font-size: 18px; /* تصغير حجم العناوين الفرعية */
+    }
+    
+    .text-container-service_pg p {
+        font-size: 14px; /* تصغير حجم النص أكثر */
+        line-height: 1.5; /* تعديل تباعد الأسطر */
+    }
+}
+
+
  /* Footer */
  footer {
     padding: 50px;
