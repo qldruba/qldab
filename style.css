@@ -105,6 +105,39 @@ nav ul li a {
     .menu-toggle {
         display: none; 
     }
+}@media (min-width: 769px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%; /* تعديل المساحة الجانبية */
+    }
+    
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+        padding-right: 30px;
+    }
+    
+    .nav-links li {
+        margin: 0 0 0 35px; /* مسافة أكبر بين العناصر */
+    }
+    
+    .nav-links a {
+        color: white;
+        font-size: 18px;
+        padding: 8px 0;
+        position: relative;
+    }
+    
+    .nav-links a:hover {
+        color: #333;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
 }
 
 
