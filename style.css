@@ -223,7 +223,8 @@ nav ul li a {
 .hero {
     margin-top: auto;
     position: relative;
-    height: 100vh;
+    z-index: 1;
+    min-height: 100vh;
     overflow: visible;
     margin-bottom: auto;
 }
@@ -232,6 +233,7 @@ nav ul li a {
     width: 100%;
     height: auto;
     object-fit: cover;
+    margin-bottom: auto;
 
 }
 
