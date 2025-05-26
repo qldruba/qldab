@@ -2101,7 +2101,7 @@ input[type="text"], input[type="number"], select {
     }
 /*service 1 page*/
 #service1_pg{
-    margin-top: 20px;
+    margin-top: 40px;
     background: linear-gradient(135deg, #3a8dde, #ffffff);
     padding: 20px 0;
 }
