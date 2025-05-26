@@ -95,7 +95,7 @@ nav ul li a {
     .nav-links {
         display: flex;
         margin-left: auto; /* يدفع الروابط لليمين */
-        margin-right: 2%;
+       
     }
     
     .nav-links li {
