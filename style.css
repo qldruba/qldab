@@ -95,6 +95,7 @@ nav ul li a {
     .nav-links {
         display: flex;
         margin-left: auto; /* يدفع الروابط لليمين */
+        margin-right: 2%;
     }
     
     .nav-links li {
@@ -226,14 +227,23 @@ nav ul li a {
     z-index: 1;
     min-height: 100vh;
     overflow: visible;
-    margin-bottom: auto;
+   /* margin-top: 60px; /* تعويض عن الهيدر المثبت */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    height: 20px;
+    background: linear-gradient(to bottom, #c4c4c4, #3c7591); 
 }
 
 #home video{
     width: 100%;
     height: auto;
     object-fit: cover;
-    margin-bottom: auto;
+    margin-bottom: 0;
 
 }
 
@@ -276,9 +286,13 @@ nav ul li a {
     border-radius: 300px;
 }
 @media only screen and (max-width: 768px) {
-    /* تحسين مسافة الهيرو سكشن */
     #home {
-        margin-bottom: 20px; /* هامش صغير فقط */
+        margin-bottom: 20px; 
+    }
+    .hero {
+        margin-top: 60px;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 }
 
