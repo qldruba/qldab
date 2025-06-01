@@ -202,107 +202,229 @@
     }
 </script>
 
+<!-- Section: Cost Estimator & Contact Combined -->
+<section id="estimateSection6" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Cost Estimator & Contact</h2>
+    <div class="row">
+      <!-- Left: Form and Results -->
+      <div class="col-lg-5 mb-4">
+        <form id="estimateForm6" action="https://formspree.io/f/xkgbwlvr" method="POST" class="bg-white p-4 rounded shadow-sm">
+          <div class="mb-3">
+            <label for="fullName6" class="form-label">Full Name <span class="text-danger">*</span></label>
+            <input type="text" id="fullName6" name="FullName" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="email6" class="form-label">Email <span class="text-danger">*</span></label>
+            <input type="email" id="email6" name="_replyto" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="phone6" class="form-label">Phone Number <span class="text-danger">*</span></label>
+            <input type="tel" id="phone6" name="Phone" class="form-control" required />
+          </div>
+          <hr />
+          <h5>Shipment Details</h5>
+          <div class="mb-3">
+            <label for="cargoType6" class="form-label">Cargo Type (Weight/Volume etc.) <span class="text-danger">*</span></label>
+            <input type="text" id="cargoType6" name="CargoType" class="form-control" placeholder="e.g. 500kg, 2m³" required />
+          </div>
+          <div class="mb-3">
+            <label for="specialInstructions6" class="form-label">Special Instructions / Notes</label>
+            <textarea id="specialInstructions6" name="SpecialInstructions" class="form-control" rows="3" placeholder="Optional"></textarea>
+          </div>
+          <hr />
+          <h5>Route Information</h5>
+          <div class="mb-3">
+            <label>Start Point (Select on Map)</label>
+            <input type="text" id="startPoint6" name="StartPoint" class="form-control" readonly required placeholder="Click on map to select start" />
+          </div>
+          <div class="mb-3">
+            <label>End Point (Select on Map)</label>
+            <input type="text" id="endPoint6" name="EndPoint" class="form-control" readonly required placeholder="Click on map to select end" />
+          </div>
+          <div class="mb-3">
+            <label>Distance (km)</label>
+            <input type="text" id="distance6" name="Distance" class="form-control" readonly />
+          </div>
+          <div class="mb-3">
+            <label>Estimated Cost (SEK)</label>
+            <input type="text" id="cost6" name="EstimatedCost" class="form-control fw-bold" readonly />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit Order</button>
+        </form>
 
-<section id="cost-estimator-6" style="padding: 30px; background: #f8fafc; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); max-width: 600px; margin: auto; font-family: 'Segoe UI', sans-serif;">
-  <h2 style="margin-bottom: 20px; color: #1e293b;">📦 Shipping Cost Estimator</h2>
+        <div id="formMessage6" class="mt-3 text-center"></div>
 
-  <form id="estimatorForm-6" style="display: flex; flex-direction: column; gap: 15px;">
-    <label>
-      Package Type:
-      <select name="type" id="packageType-6" required>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
-    </label>
+        <!-- Contact Buttons -->
+        <div class="mt-4 d-flex justify-content-center gap-3">
+          <a href="tel:+46700000000" class="btn btn-success"><i class="bi bi-telephone-fill"></i> Call Us</a>
+          <a href="https://wa.me/46700000000" target="_blank" class="btn btn-success"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
 
-    <label>
-      Approximate Weight (kg):
-      <input type="number" id="weight-6" min="0" placeholder="e.g. 5" required>
-    </label>
+      <!-- Right: Map -->
+      <div class="col-lg-7">
+        <div id="map6" style="height: 400px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1);"></div>
+        <small class="text-muted">Click on the map to select Start and End points.</small>
+      </div>
+    </div>
+  </div>
 
-    <label>
-      Pickup Location:
-      <input type="text" id="origin-6" placeholder="Start typing location..." required>
-    </label>
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-sA+gZ1D5Dfky9IcZlRAC5tWsjD3PbVQvEwQlZ+pru7w=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+    integrity="sha256-o2jR7jwCFXmkyo0Py0CZr+y0m5U6XSxRsyRmAQu7LuI=" crossorigin=""></script>
 
-    <label>
-      Destination:
-      <input type="text" id="destination-6" placeholder="Start typing destination..." required>
-    </label>
+  <!-- Leaflet Routing Machine -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
 
-    <button type="submit" style="padding: 10px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer;" id="estimateBtn-6">
-      Estimate Cost
-    </button>
-  </form>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Initialize the map
+      var map = L.map('map6').setView([59.3293, 18.0686], 10); // Centered on Stockholm, Sweden
 
-  <div id="result-6" style="margin-top: 20px; font-weight: bold; color: #0f172a;"></div>
+      // Add OpenStreetMap tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Variables to store markers
+      var startMarker, endMarker, routeControl;
+
+      // Function to update form fields with lat/lng
+      function updatePointInputs() {
+        if (startMarker) {
+          document.getElementById('startPoint6').value = startMarker.getLatLng().lat.toFixed(5) + ', ' + startMarker.getLatLng().lng.toFixed(5);
+        }
+        if (endMarker) {
+          document.getElementById('endPoint6').value = endMarker.getLatLng().lat.toFixed(5) + ', ' + endMarker.getLatLng().lng.toFixed(5);
+        }
+      }
+
+      // Function to update distance and cost
+      function updateDistanceAndCost(route) {
+        if (!route || !route.summary) return;
+
+        var distanceInMeters = route.summary.totalDistance;
+        var distanceKm = (distanceInMeters / 1000).toFixed(2);
+        document.getElementById('distance6').value = distanceKm;
+
+        // **تعديل هنا سعر الكيلومتر بالكرونا السويدية SEK حسب رغبتك**
+        const pricePerKmSEK = 15; // <-- عدل القيمة هنا لتغيير السعر
+
+        var estimatedCost = (distanceKm * pricePerKmSEK).toFixed(2);
+        document.getElementById('cost6').value = estimatedCost;
+      }
+
+      // On map click, add markers for start and end points
+      var clickCount = 0;
+      map.on('click', function(e) {
+        if (clickCount === 0) {
+          if (startMarker) map.removeLayer(startMarker);
+          startMarker = L.marker(e.latlng, {draggable:true}).addTo(map).bindPopup('Start Point').openPopup();
+          clickCount++;
+        } else if (clickCount === 1) {
+          if (endMarker) map.removeLayer(endMarker);
+          endMarker = L.marker(e.latlng, {draggable:true}).addTo(map).bindPopup('End Point').openPopup();
+          clickCount++;
+          // Draw route when both points are selected
+          if (routeControl) {
+            map.removeControl(routeControl);
+          }
+          routeControl = L.Routing.control({
+            waypoints: [
+              startMarker.getLatLng(),
+              endMarker.getLatLng()
+            ],
+            routeWhileDragging: true,
+            draggableWaypoints: true,
+            addWaypoints: false,
+            showAlternatives: false,
+            lineOptions: {
+              styles: [{color: 'blue', opacity: 0.6, weight: 4}]
+            },
+            createMarker: function() { return null; } // Don't add extra markers
+          }).addTo(map);
+
+          routeControl.on('routesfound', function(e) {
+            var route = e.routes[0];
+            updateDistanceAndCost(route);
+            updatePointInputs();
+          });
+
+          // Update fields if markers dragged
+          startMarker.on('dragend', function() {
+            routeControl.setWaypoints([startMarker.getLatLng(), endMarker.getLatLng()]);
+            updatePointInputs();
+          });
+          endMarker.on('dragend', function() {
+            routeControl.setWaypoints([startMarker.getLatLng(), endMarker.getLatLng()]);
+            updatePointInputs();
+          });
+        } else {
+          // Reset points on third click
+          map.removeLayer(startMarker);
+          map.removeLayer(endMarker);
+          if (routeControl) map.removeControl(routeControl);
+          startMarker = L.marker(e.latlng, {draggable:true}).addTo(map).bindPopup('Start Point').openPopup();
+          endMarker = null;
+          document.getElementById('startPoint6').value = '';
+          document.getElementById('endPoint6').value = '';
+          document.getElementById('distance6').value = '';
+          document.getElementById('cost6').value = '';
+          clickCount = 1;
+        }
+      });
+
+      // On form submit, handle via fetch to Formspree + show message
+      var form = document.getElementById('estimateForm6');
+      var messageDiv = document.getElementById('formMessage6');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Basic validation: ensure distance and cost calculated
+        if (!document.getElementById('distance6').value || !document.getElementById('cost6').value) {
+          alert('Please select both Start and End points on the map to calculate cost.');
+          return;
+        }
+
+        var formData = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            messageDiv.innerHTML = '<div class="alert alert-success">Thank you! Your order has been submitted.</div>';
+            form.reset();
+            // Clear map markers and route
+            if (startMarker) map.removeLayer(startMarker);
+            if (endMarker) map.removeLayer(endMarker);
+            if (routeControl) map.removeControl(routeControl);
+            document.getElementById('distance6').value = '';
+            document.getElementById('cost6').value = '';
+            document.getElementById('startPoint6').value = '';
+            document.getElementById('endPoint6').value = '';
+            clickCount = 0;
+          } else {
+            response.json().then(function(data) {
+              if (Object.hasOwn(data, 'errors')) {
+                messageDiv.innerHTML = '<div class="alert alert-danger">'+ data["errors"].map(error => error.message).join(", ") +'</div>';
+              } else {
+                messageDiv.innerHTML = '<div class="alert alert-danger">Oops! There was a problem submitting your form.</div>';
+              }
+            });
+          }
+        }).catch(function(error) {
+          messageDiv.innerHTML = '<div class="alert alert-danger">Oops! There was a problem submitting your form.</div>';
+        });
+      });
+    });
+  </script>
 </section>
 
-<script>
-  const costPerKm = 0.5;
-  const costPerKg = 0.3;
-  const typeFees = { small: 0, medium: 5, large: 10 };
-
-  let originAutocomplete, destinationAutocomplete;
-
-  function initAutocomplete() {
-    originAutocomplete = new google.maps.places.Autocomplete(document.getElementById("origin-6"));
-    destinationAutocomplete = new google.maps.places.Autocomplete(document.getElementById("destination-6"));
-  }
-
-  document.getElementById("estimatorForm-6").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const type = document.getElementById('packageType-6').value;
-    const weight = parseFloat(document.getElementById('weight-6').value);
-    const origin = document.getElementById('origin-6').value.trim();
-    const destination = document.getElementById('destination-6').value.trim();
-    const resultDiv = document.getElementById('result-6');
-    const button = document.getElementById('estimateBtn-6');
-
-    if (!origin || !destination || isNaN(weight)) {
-      resultDiv.textContent = "Please fill in all fields correctly.";
-      return;
-    }
-
-    button.textContent = "Calculating...";
-    button.disabled = true;
-
-    const service = new google.maps.DistanceMatrixService();
-    service.getDistanceMatrix({
-      origins: [origin],
-      destinations: [destination],
-      travelMode: 'DRIVING',
-      unitSystem: google.maps.UnitSystem.METRIC
-    }, function (response, status) {
-      button.textContent = "Estimate Cost";
-      button.disabled = false;
-
-      if (status !== 'OK') {
-        resultDiv.textContent = "Error calculating distance. Please try again.";
-        return;
-      }
-
-      const element = response.rows[0].elements[0];
-      if (element.status !== "OK") {
-        resultDiv.textContent = "Could not find route between the locations.";
-        return;
-      }
-
-      const distanceKm = element.distance.value / 1000; // in km
-      const duration = element.duration.text;
-
-      const cost = (distanceKm * costPerKm) + (weight * costPerKg) + typeFees[type];
-
-      resultDiv.innerHTML = `
-        🚗 Distance: ${distanceKm.toFixed(2)} km<br>
-        🕒 Delivery Time: ~${duration}<br>
-        💰 Estimated Cost: <span style="color:#16a34a;">$${cost.toFixed(2)}</span>
-      `;
-    });
-  });
-</script>
 
     <!-- Footer -->
     <footer>
