@@ -239,6 +239,70 @@
   <div id="result-6" style="margin-top: 20px; font-weight: bold; color: #0f172a;"></div>
 </section>
 
+<script>
+  const costPerKm = 0.5;
+  const costPerKg = 0.3;
+  const typeFees = { small: 0, medium: 5, large: 10 };
+
+  let originAutocomplete, destinationAutocomplete;
+
+  function initAutocomplete() {
+    originAutocomplete = new google.maps.places.Autocomplete(document.getElementById("origin-6"));
+    destinationAutocomplete = new google.maps.places.Autocomplete(document.getElementById("destination-6"));
+  }
+
+  document.getElementById("estimatorForm-6").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const type = document.getElementById('packageType-6').value;
+    const weight = parseFloat(document.getElementById('weight-6').value);
+    const origin = document.getElementById('origin-6').value.trim();
+    const destination = document.getElementById('destination-6').value.trim();
+    const resultDiv = document.getElementById('result-6');
+    const button = document.getElementById('estimateBtn-6');
+
+    if (!origin || !destination || isNaN(weight)) {
+      resultDiv.textContent = "Please fill in all fields correctly.";
+      return;
+    }
+
+    button.textContent = "Calculating...";
+    button.disabled = true;
+
+    const service = new google.maps.DistanceMatrixService();
+    service.getDistanceMatrix({
+      origins: [origin],
+      destinations: [destination],
+      travelMode: 'DRIVING',
+      unitSystem: google.maps.UnitSystem.METRIC
+    }, function (response, status) {
+      button.textContent = "Estimate Cost";
+      button.disabled = false;
+
+      if (status !== 'OK') {
+        resultDiv.textContent = "Error calculating distance. Please try again.";
+        return;
+      }
+
+      const element = response.rows[0].elements[0];
+      if (element.status !== "OK") {
+        resultDiv.textContent = "Could not find route between the locations.";
+        return;
+      }
+
+      const distanceKm = element.distance.value / 1000; // in km
+      const duration = element.duration.text;
+
+      const cost = (distanceKm * costPerKm) + (weight * costPerKg) + typeFees[type];
+
+      resultDiv.innerHTML = `
+        🚗 Distance: ${distanceKm.toFixed(2)} km<br>
+        🕒 Delivery Time: ~${duration}<br>
+        💰 Estimated Cost: <span style="color:#16a34a;">$${cost.toFixed(2)}</span>
+      `;
+    });
+  });
+</script>
 
     <!-- Footer -->
     <footer>
