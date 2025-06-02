@@ -11,30 +11,40 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="images/logo22.png" />
 
-            <!-- Bootstrap Icons-->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-            <!-- Google fonts-->
-            <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-            <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-            <!-- SimpleLightbox plugin CSS-->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-    <title>	Contact </title>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1HNW45YYW"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     
-            gtag('config', 'G-D1HNW45YYW');
-        </script>
-        
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <title>	Contact </title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1HNW45YYW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-D1HNW45YYW');
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-Gt3cFtYUGkcFUYKrElhpJmVsy9OCHP0&libraries=places&callback=initAutocomplete" async defer></script>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -202,6 +212,212 @@
         alert('Payment simulation: Order placed successfully!');
     }
 </script>
+
+<!-- Order & Contact Section --><section class="order-contact-section">
+  <div class="container">
+    <h2 class="section-title">Request an Order & Contact Us</h2>
+
+    <form action="https://formspree.io/f/xkgbwlvr" method="POST" class="order-form">
+      <label>Full Name</label>
+      <input type="text" name="name" placeholder="Your name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Your email" required>
+
+      <label>Phone Number</label>
+      <input type="text" name="phone" placeholder="Your phone number">
+
+      <label>Package Type</label>
+      <select name="package_type" required>
+        <option value="" disabled selected>Select package type</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+
+      <label>Approximate Weight (kg)</label>
+      <input type="number" name="weight" placeholder="Weight in kg" required>
+
+      <label>Additional Notes</label>
+      <textarea name="notes" rows="3" placeholder="Any special instructions..."></textarea>
+
+      <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+
+    <div class="map-section">
+      <label>Route Selection</label>
+      <div id="map" style="height: 320px; border-radius: 12px; border: 1px solid #ddd; margin-top: 10px;"></div>
+      <p class="map-note">Click on the map to select Start and Destination points</p>
+      <input type="hidden" name="start_point" id="start_point">
+      <input type="hidden" name="end_point" id="end_point">
+
+      <button onclick="calculateCost()" class="estimate-btn">Estimate Cost</button>
+
+      <p><strong>Estimated Distance:</strong> <span id="distance_km">0</span> km</p>
+      <p><strong>Estimated Cost:</strong> <span id="estimated_cost">0</span> SEK</p>
+    </div>
+
+    <div class="contact-buttons">
+      <a href="tel:+46701234567" class="call-btn">Call Us</a>
+      <a href="https://wa.me/46701234567" target="_blank" class="whatsapp-btn">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .order-contact-section {
+    display: contents;
+    padding: 50px 20px;
+    background: #f3f4f6;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: block;
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  .submit-btn {
+    margin-top: 25px;
+    background-color: #059669;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .submit-btn:hover {
+    background-color: #047857;
+  }
+  .map-section {
+    margin-top: 40px;
+  }
+  .map-note {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  .estimate-btn {
+    margin-top: 20px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .estimate-btn:hover {
+    background-color: #2563eb;
+  }
+  .contact-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .call-btn, .whatsapp-btn {
+    flex: 1;
+    text-align: center;
+    background-color: #f59e0b;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .call-btn:hover {
+    background-color: #b45309;
+  }
+  .whatsapp-btn {
+    background-color: #22c55e;
+  }
+  .whatsapp-btn:hover {
+    background-color: #15803d;
+  }
+</style>
+
+<!-- Leaflet CSS & JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let map = L.map('map').setView([59.3293, 18.0686], 10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    let points = [];
+
+    map.on('click', function(e) {
+      if (points.length < 2) {
+        const marker = L.marker(e.latlng).addTo(map);
+        points.push(e.latlng);
+        if (points.length === 1) {
+          document.getElementById('start_point').value = `${e.latlng.lat},${e.latlng.lng}`;
+        } else {
+          document.getElementById('end_point').value = `${e.latlng.lat},${e.latlng.lng}`;
+        }
+      } else {
+        alert('You already selected start and end points.');
+      }
+    });
+
+    window.calculateCost = function () {
+      if (points.length < 2) {
+        alert('Please select both points on the map.');
+        return;
+      }
+      const R = 6371; // Radius of Earth in km
+      const dLat = (points[1].lat - points[0].lat) * Math.PI / 180;
+      const dLon = (points[1].lng - points[0].lng) * Math.PI / 180;
+      const a = Math.sin(dLat / 2) ** 2 +
+                Math.cos(points[0].lat * Math.PI / 180) *
+                Math.cos(points[1].lat * Math.PI / 180) *
+                Math.sin(dLon / 2) ** 2;
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      const distance = R * c;
+      const rounded = distance.toFixed(1);
+      document.getElementById('distance_km').innerText = rounded;
+      document.getElementById('estimated_cost').innerText = (50 + distance * 7).toFixed(2);
+    };
+  });
+</script>
+
+
+
 
 
     <!-- Footer -->
