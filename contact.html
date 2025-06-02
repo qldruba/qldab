@@ -203,43 +203,90 @@
     }
 </script>
 
-<!-- Section: Cost Estimator & Contact - Responsive & Professional-->
-<section id="shipping-calculator" style="background-color: #f0f4f8; padding: 60px 20px; width: 100%;">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px;">
-    
-    <!-- Content Side -->
-    <div style="flex: 1 1 400px;">
-      <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #0a2a43;">Shipping Cost Calculator</h2>
-      <p style="font-size: 1.1rem; color: #444; margin-bottom: 30px;">
-        Easily calculate the cost of your shipment based on distance, weight, and delivery options. Enter the required details to get an accurate quote.
-      </p>
+<!-- Section: Cost Estimator & Contact - Updated Layout -->
+ 
+<section id="estimateSection6" class="py-5" style="background-color: #f9fafb;">
+  <div class="container">
+    <h2 class="mb-5 text-center fw-bold" style="color:#0a2647;">Cost Estimator & Contact</h2>
 
-      <form onsubmit="event.preventDefault(); calculateCost();" style="display: flex; flex-direction: column; gap: 20px;">
-        <input type="text" placeholder="Start Location" id="startLocation" required style="padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;" />
-        <input type="text" placeholder="Destination" id="endLocation" required style="padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;" />
-        <input type="number" placeholder="Weight (kg)" id="weight" required style="padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;" />
-        <button type="submit" style="padding: 14px; background-color: #0a84ff; color: white; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer;">Calculate Cost</button>
-      </form>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <form id="estimateForm6" action="https://formspree.io/f/xkgbwlvr" method="POST" class="bg-white p-4 p-md-5 rounded shadow-sm border border-gray-200" novalidate>
 
-      <div id="result" style="margin-top: 20px; font-size: 1.2rem; color: #0a2a43;"></div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="fullName6" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+              <input type="text" id="fullName6" name="FullName" class="form-control" placeholder="Your full name" required />
+            </div>
+            <div class="col-md-6">
+              <label for="email6" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+              <input type="email" id="email6" name="_replyto" class="form-control" placeholder="you@example.com" required />
+            </div>
+            <div class="col-md-6">
+              <label for="phone6" class="form-label fw-semibold">Phone Number <span class="text-danger">*</span></label>
+              <input type="tel" id="phone6" name="Phone" class="form-control" placeholder="+46 7XX XXX XXX" required />
+            </div>
+          </div>
+
+          <hr class="my-4" />
+          <h5 class="fw-semibold mb-3" style="color:#0a2647;">Shipment Details</h5>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="cargoType6" class="form-label fw-semibold">Cargo Type / Weight / Volume <span class="text-danger">*</span></label>
+              <input type="text" id="cargoType6" name="CargoType" class="form-control" placeholder="E.g. 500kg, 2m³" required />
+            </div>
+            <div class="col-md-6">
+              <label for="specialInstructions6" class="form-label fw-semibold">Special Instructions / Notes</label>
+              <textarea id="specialInstructions6" name="SpecialInstructions" class="form-control" rows="1" placeholder="Optional"></textarea>
+            </div>
+          </div>
+
+          <hr class="my-4" />
+          <h5 class="fw-semibold mb-3" style="color:#0a2647;">Route Information</h5>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Start Point <small class="text-muted">(Select on map)</small></label>
+              <input type="text" id="startPoint6" name="StartPoint" class="form-control" readonly required placeholder="Click on the map to select start" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">End Point <small class="text-muted">(Select on map)</small></label>
+              <input type="text" id="endPoint6" name="EndPoint" class="form-control" readonly required placeholder="Click on the map to select end" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Distance (km)</label>
+              <input type="text" id="distance6" name="Distance" class="form-control" readonly placeholder="Calculated automatically" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Estimated Cost (SEK)</label>
+              <input type="text" id="cost6" name="EstimatedCost" class="form-control fw-bold text-success" readonly placeholder="Calculated automatically" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 fw-semibold mt-4">Submit Order</button>
+
+          <div id="formMessage6" class="mt-3 text-center"></div>
+        </form>
+
+        <!-- Call/WhatsApp Buttons -->
+        <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+          <a href="tel:+46700000000" class="btn btn-success d-flex align-items-center gap-2 px-4 py-2 rounded shadow-sm" style="min-width: 130px;">
+            <i class="bi bi-telephone-fill fs-5"></i> Call Us
+          </a>
+          <a href="https://wa.me/46700000000" target="_blank" class="btn btn-success d-flex align-items-center gap-2 px-4 py-2 rounded shadow-sm" style="min-width: 130px;">
+            <i class="bi bi-whatsapp fs-5"></i> WhatsApp
+          </a>
+        </div>
+
+        <!-- Map -->
+        <div class="mt-5">
+          <div id="map6" style="height: 400px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1);"></div>
+          <p class="text-muted mt-2 small fst-italic text-center">Click on the map to select Start and End points for route estimation.</p>
+        </div>
+      </div>
     </div>
-
-    <!-- Image or Visual Side -->
-    <div style="flex: 1 1 400px; text-align: center;">
-      <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="Shipping illustration" style="max-width: 100%; height: auto;" />
-    </div>
-
   </div>
-
-  <!-- Script -->
-  <script>
-    function calculateCost() {
-      const weight = parseFloat(document.getElementById('weight').value) || 0;
-      const basePrice = 5; // base rate
-      const cost = basePrice + weight * 1.2;
-      document.getElementById('result').textContent = `Estimated Cost: $${cost.toFixed(2)}`;
-    }
-  </script>
 </section>
 
 
