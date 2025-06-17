@@ -255,7 +255,7 @@ nav ul li a {
     padding: 50px;
     background: linear-gradient(to right, #3c7591, #1f1f1f);
     color: #fff;
-    margin-top: auto;
+    margin-top: 0;
 }
 
 
@@ -293,6 +293,8 @@ nav ul li a {
         margin-top: 60px;
         margin-bottom: 0;
         padding-bottom: 0;
+        min-height: auto !important; /* إلغاء الـ 100vh */
+        height: auto;
     }
 }
 
