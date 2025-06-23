@@ -429,6 +429,88 @@ nav ul li a {
     transform: translateY(-3px);
 }
 /* ========== Media Queries for About Us Section ========== */
+
+/* ميديا كويري للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .about-us-section {
+    flex-direction: column; /* تخلي الفيديو فوق والنص تحت */
+    padding: 20px;
+  }
+
+  .about-us-left,
+  .about-us-right {
+    width: 100%;
+  }
+
+  .about-us-left video {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-us-right h2,
+  .about-us-right h4 {
+    font-size: 20px;
+  }
+
+  .about-us-right p {
+    font-size: 15px;
+  }
+}
+
+/* تحسينات إضافية لشاشات أصغر جدًا */
+@media (max-width: 480px) {
+  .about-us-right h2,
+  .about-us-right h4 {
+    font-size: 18px;
+  }
+
+  .about-us-right p {
+    font-size: 14px;
+  }
+}
+
+
+
+/* التجاوب مع الموبايل والتابلت */
+@media (max-width: 768px) {
+  .about-us .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-us .content h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .about-us .content p {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .about-us .image {
+    width: 100%;
+  }
+
+  .about-us .content {
+    width: 100%;
+  }
+}
+
+/* تحسين لشاشات صغيرة جدًا */
+@media (max-width: 480px) {
+  .about-us .content h2 {
+    font-size: 20px;
+  }
+
+  .about-us .content p {
+    font-size: 14px;
+  }
+}
+
+
+
+
 @media only screen and (max-width: 1200px) {
     #about {
         padding: 40px;
