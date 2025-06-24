@@ -274,8 +274,15 @@ nav ul li a {
 .intro-image {
     width: 40%;
     height: 65%;
-    margin-bottom: 10px;
+    position: relative;
+    top: -90px;
 }
+
+.intro-image img {
+    width: 100%;
+    border-radius: 300px;
+}
+
 
 .intro-image:hover{
     transform: scale(1.05);
@@ -308,6 +315,9 @@ nav ul li a {
     .intro-text {
         font-size: 20px;
     }
+    .intro-image{
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -323,7 +333,7 @@ nav ul li a {
     }
     
     .intro-image {
-        margin-top: 30px;
+        margin-top: 60px;
     }
 }
 
@@ -340,6 +350,12 @@ nav ul li a {
     .intro-text {
         font-size: 18px;
     }
+    .intro-image img {
+    border-radius: 300px;
+    margin-top: 60px;
+
+    }
+    
 }
 
 @media only screen and (max-width: 576px) {
@@ -357,7 +373,9 @@ nav ul li a {
     }
     
     .intro-image img {
-        border-radius: 150px;
+        border-radius: 300px;
+        margin-top: 60px;
+
     }
 }
 
@@ -435,10 +453,12 @@ nav ul li a {
 }
 
 .about-content img {
-    width: 30%;
-    height: 40%;
+    width: 20%;
+    height: 20%;
     margin-right: 20px;
+    margin-left: 50px;
 }
+
 
 .about-content img:hover{
     transform: scale(1.05);
@@ -573,9 +593,11 @@ nav ul li a {
         text-align: center;
     }
     .about-content img {
-        width: 50%;
+        width: 30%;
+        height: 30%;
         margin-right: 0;
         margin-bottom: 25px;
+        margin-left: 10px;
     }
     .about-content p {
         width: 80%;
@@ -592,7 +614,11 @@ nav ul li a {
         padding: 25px;
     }
     .about-content img {
-        width: 60%;
+        width: 30%;
+        height: 30%;
+        margin-right: 0;
+        margin-bottom: 25px;
+        margin-left: 10px;
     }
     .about-content p {
         width: 90%;
@@ -611,7 +637,11 @@ nav ul li a {
         padding: 20px;
     }
     .about-content img {
-        width: 80%;
+        width: 30%;
+        height: 30%;
+        margin-right: 0;
+        margin-bottom: 25px;
+        margin-left: 10px;
     }
     .about-content p {
         width: 100%;
@@ -625,6 +655,61 @@ nav ul li a {
         font-size: 14px;
     }
 }
+/* ==== Animation Keyframes ==== */
+
+/* من اليسار */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* لمعان */
+@keyframes shine {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* ==== Animation Base Classes ==== */
+
+.animate-slide-in {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.animate-shine {
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear forwards;
+}
+
+/* ==== Apply Animations ==== */
+
+#about h1 {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards, shine 2s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+.about-content img {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards, shine 2s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+
 /* Video Section */
 .video-section {
     position: relative;
@@ -1099,7 +1184,7 @@ form button:hover {
     gap: 50px;
     max-width: 1200px;
     background: #fff;
-    padding: 40px;
+    padding: 10px;
     border-radius: 20px;
     box-shadow: 0 50x 400px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -1158,67 +1243,71 @@ form button:hover {
     transform: translateY(-3px);
 }
     
-/* تنسيق القسم العام */
+/* القسم العام */
 .about-us-section {
     display: flex;
-    flex-wrap: wrap; /* يسمح للقسم بالتوسع مع المحتوى */
+    flex-wrap: nowrap; /* يسمح للعنصر بالالتفاف على الشاشات الصغيرة */
     width: 100%;
     justify-content: center;
     padding: 2.5rem;
     background-color: #f3f4f6;
     align-items: stretch;
-    min-height: auto; /* تغيير من 100vh إلى auto */
-    flex: 1;
-    margin-bottom: 2rem; /* إضافة مسافة أسفل القسم */
+    margin-bottom: 2rem;
+    box-sizing: border-box;
 }
 
-/* القسم الأزرق في اليسار */
+/* القسم الأزرق (اليسار) */
 .about-us-left {
-    flex: 1.7; 
+    flex: 1.7 1 400px; /* flex-grow:1.7, flex-shrink:1, flex-basis:400px */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
     position: relative;
     width: 100%;
-    min-height: 400px; /* ارتفاع أدنى بدلًا من 100vh */
+    min-height: 400px;
+    padding: 0;
 }
 
-/* تنسيق العنوان داخل القسم الأزرق */
+/* العنوان داخل القسم الأزرق */
 .about-us-left h1 {
-    position: relative; /* لضمان ظهور العنوان فوق الفيديو */
+    position: relative;
     z-index: 2;
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    margin: 0;
 }
 
-/* ضبط الفيديو ليكون خلف النص */
+/* الفيديو */
 .about-us-left video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* يجعل الفيديو يغطي القسم بالكامل */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-/* القسم النصي في اليمين */
+/* القسم النصي (اليمين) */
 .about-us-right {
-    flex: 2.3; /* يجعل القسم الأيمن يأخذ ضعف حجم القسم الأيسر */
+    flex: 2.3 1 500px; /* flex-grow:2.3, flex-shrink:1, flex-basis:500px */
     padding: 20px;
     background-color: white;
     overflow-y: auto;
     display: inline-block;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* تنسيق النصوص */
+/* العناوين */
 .about-us-right h2 {
     font-size: 1.8rem;
     font-weight: bold;
     color: #1e3a8a;
+    margin-top: 0;
 }
 
 .about-us-right h4 {
@@ -1227,12 +1316,14 @@ form button:hover {
     color: #1e3a8a;
 }
 
+/* النصوص */
 .about-us-text {
     font-size: 1.125rem;
     color: #374151;
     line-height: 1.6;
 }
-    
+
+/* القسم الخاص .about3 */
 .about3 {
     background: linear-gradient(135deg, #1e3a8a, #3b82f6);
     color: white;
@@ -1240,8 +1331,7 @@ form button:hover {
     padding: 3rem 2rem;
     border-radius: 12px;
     width: 100%;
-    margin: 50px auto;
-    margin-bottom: 50px;
+    margin: 50px auto 50px auto;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     min-height: 300px;
 
@@ -1276,10 +1366,29 @@ form button:hover {
 }
 
 /* تأثيرات التمرير */
-    .show {
-        opacity: 1 !important;
-        transform: translateX(0) !important;
-    }
+.show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+
+/* ميديا كويري للشاشات الصغيرة */
+@media (max-width: 991px) {
+  .about-us-section {
+    flex-direction: column; /* العمود بدل الصف */
+    flex-wrap: nowrap; /* ممنوع الالتفاف */
+  }
+  .about-us-left,
+  .about-us-right {
+    max-width: 100%;
+    min-width: auto;
+  }
+  .about-us-left {
+    margin-bottom: 1rem; /* مسافة بين الفيديو والنص */
+  }
+}
+
+
 /* img section */
     /* تنسيق السكشن */
     .photo-ab-section {
