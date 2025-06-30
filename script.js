@@ -176,3 +176,38 @@ function simulatePayment() {
     alert("Please fill all fields before proceeding to payment.");
   }
 }
+
+
+// box seaction vid 
+
+  const containers44 = document.querySelectorAll('.video-container44');
+  const overlay44 = document.getElementById('videoOverlay44');
+  const expandedVideo44 = document.getElementById('expandedVideo44');
+  const overlayTitle44 = document.getElementById('overlayTitle44');
+  const closeBtn44 = document.getElementById('closeOverlayBtn44');
+
+  containers44.forEach(container => {
+    container.addEventListener('click', () => {
+      const video = container.querySelector('video');
+      const source = video.querySelector('source').src;
+      const title = container.dataset.title;
+
+      expandedVideo44.src = source;
+      expandedVideo44.load();
+      expandedVideo44.play();
+      overlayTitle44.textContent = title;
+      overlay44.classList.remove('hidden44');
+    });
+  });
+
+  closeBtn44.addEventListener('click', () => {
+    expandedVideo44.pause();
+    expandedVideo44.src = '';
+    overlay44.classList.add('hidden44');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay44.classList.contains('hidden44')) {
+      closeBtn44.click();
+    }
+  });
