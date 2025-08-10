@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #c4c4c4;
+    background-color: linear-gradient(to right, #e1e3e4, #d3dde3);
     color: #333;
     direction: ltr;
 }
@@ -24,7 +24,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #c4c4c4;
+    background: linear-gradient(to right, #e1e3e4, #d3dde3);
     z-index: 1000;
 }
 
@@ -94,13 +94,13 @@ nav ul li a {
     
     .nav-links {
         display: flex;
-        margin-left: auto; /* يدفع الروابط لليمين */
+        margin-left: auto; 
        
     }
     
     .nav-links li {
-        margin-left: 25px; /* مسافة بين الروابط */
-        margin-right: 0; /* إلغاء أي margin-right موجود */
+        margin-left: 25px; 
+        margin-right: 0; 
     }
     
     .menu-toggle {
@@ -111,7 +111,7 @@ nav ul li a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 5%; /* تعديل المساحة الجانبية */
+        padding: 10px 5%; 
     }
     
     .nav-links {
@@ -1009,6 +1009,66 @@ nav ul li a {
 .gallery-item.active {
     opacity: 1;
 }
+
+
+/*cub section */
+.cube-wrapper6 {
+  perspective: 1200px;
+  width: 320px;
+  height: 320px;
+  margin: 5rem auto;
+}
+
+.cube6 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube6 18s infinite linear;
+}
+
+.face6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* الصور داخل الوجوه */
+.face6 img {
+  width: 100%;
+  height: 100%;
+  object-fit:scale-down;
+  display: block;
+}
+
+/* وجوه المكعب - لاحظ translateZ زدتو لـ 160px لتظهر الصورة بوضوح */
+.front6  { transform: rotateY(0deg) translateZ(160px); }
+.back6   { transform: rotateY(180deg) translateZ(160px); }
+.right6  { transform: rotateY(90deg) translateZ(160px); }
+.left6   { transform: rotateY(-90deg) translateZ(160px); }
+.top6    { transform: rotateX(90deg) translateZ(160px); }
+.bottom6 { transform: rotateX(-90deg) translateZ(160px); }
+
+/* أنيميشن دوران المكعب */
+@keyframes rotateCube6 {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .cube-wrapper6 {
+    width: 220px;
+    height: 220px;
+    margin: 3rem auto;
+  }
+}
+
+
 /* Contact Us Section */
 #contact {
     padding: 50px;
@@ -1163,6 +1223,64 @@ form button:hover {
     margin-top: 10px;
 }
 
+
+/* Container */
+.prism-moshour-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background: linear-gradient(to right, #e1e3e4, #d3dde3);
+  perspective: 1000px; /* 3D depth */
+}
+
+/* Prism Wrapper */
+.prism-moshour-wrapper {
+  position: relative;
+  width: min(300px, 80vw); /* responsive size */
+  height: min(300px, 80vw);
+  transform-style: preserve-3d;
+  animation: prism-moshour-rotate 8s infinite linear;
+}
+
+/* Faces */
+.prism-moshour-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.prism-moshour-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Position each face at an angle */
+.prism-moshour-face1 { transform: rotateY(0deg) translateZ(calc(min(300px, 80vw) / 2)); }
+.prism-moshour-face2 { transform: rotateY(120deg) translateZ(calc(min(300px, 80vw) / 2)); }
+.prism-moshour-face3 { transform: rotateY(240deg) translateZ(calc(min(300px, 80vw) / 2)); }
+
+/* Animation */
+@keyframes prism-moshour-rotate {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(-360deg); }
+}
+
+/* Pause animation on hover */
+.prism-moshour-wrapper:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .prism-moshour-wrapper {
+    width: 80vw;
+    height: 80vw;
+  }
+}
 
 
 
