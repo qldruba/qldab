@@ -3061,6 +3061,7 @@ footer h2:hover,
     text-align: center;
   }
 }
+
 /* Scrolling Image Section */
 .image-marquee {
   overflow: hidden;
@@ -3071,7 +3072,7 @@ footer h2:hover,
 
 .image-track {
   display: flex;
-  gap: 40px;
+  gap: 60px;
   animation: scroll-images 25s linear infinite;
 }
 
@@ -3081,8 +3082,8 @@ footer h2:hover,
 
 .image-track img {
   width: 220px;
-  height: 150px;
-  object-fit: cover;
+  height: 220px;
+  object-fit:scale-down;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
