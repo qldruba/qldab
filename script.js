@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // ====== Google Maps API Loader ======
 window.addEventListener("load", () => {
   const script = document.createElement("script");
-  script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
   script.async = true;
   document.body.appendChild(script);
 });

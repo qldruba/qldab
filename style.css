@@ -378,50 +378,117 @@ nav ul li a {
 
     }
 }
-
 /* Highlighted Image Section */
 .highlighted-images {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 60px 50px;
-    background-color: #f5f5f5;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 80px 50px;
+    background: linear-gradient(to right, #e1e3e4, #8bbcd8);
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+  position: relative;
+  overflow: visible;
 }
 
+/* Gradient animation */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shiny animated title */
+.shiny-title {
+  width: 100%;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #c2e9fb, #2c74a4, #488bd2, #c2e9fb);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 4s linear infinite, fadeInTitle 1s ease forwards;
+  opacity: 0;
+  text-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+/* Text shine animation */
+@keyframes shineText {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+/* Fade in effect */
+@keyframes fadeInTitle {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Cards same as your original */
 .image-card {
-    flex: 1 1 350px;
-    max-width: 450px;
-    background: #fff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+  flex: 1 1 350px;
+  max-width: 450px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .image-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
 .image-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .caption {
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1f1f1f;
-    background-color: #fff;
-    font-family: Cambria, serif;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f1f1f;
+  background-color: #fff;
+  font-family: Cambria, serif;
+}
+/* Responsive title for smaller screens */
+@media (max-width: 1024px) {
+  .shiny-title {
+    font-size: 55px;
+  }
 }
 
+@media (max-width: 768px) {
+  .shiny-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shiny-title {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+}
 
 /* About Us Section */
 #about {
