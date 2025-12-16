@@ -8,7 +8,7 @@
   const qa = (sel, ctx = document) => Array.from((ctx || document).querySelectorAll(sel));
 
   /* ===========================
-     Safe helpers
+     Safe helpers -
      =========================== */
   const safeAddListener = (el, ev, fn, opts) => { if (el) el.addEventListener(ev, fn, opts); };
   const safeRemove = (el) => { try { if (el && el.remove) el.remove(); } catch (e) {} };
