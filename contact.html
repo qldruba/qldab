@@ -1,473 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="company" />
-    <meta name="author" content="qld" />
-    <meta name="theme-color" content="#000000">
-    <meta name="format-detection" content="telephone=no">
-    
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="images/logo22.png" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="QLD - transforms - logistic - smart solutions" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="images/logo.png" />
 
-    <!-- Bootstrap Icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-    <!-- SimpleLightbox plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-    
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-    <title>	Contact </title>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1HNW45YYW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-D1HNW45YYW');
-    </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-Gt3cFtYUGkcFUYKrElhpJmVsy9OCHP0&libraries=places&callback=initAutocomplete" async defer></script>
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<title>Contact - QLD</title>
 </head>
-
 <body>
-    <!-- Header -->
-    <header>
-         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo22.png" alt="Company Logo">
-                </a>
-            </div>
-            <ul>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="join.html">Join Us</a></li>
-                </ul>
-                <button class="menu-toggle">☰</button>
-            </ul>
-        </nav>
-    </header>
- 
-  
- <section id="contact-page">
-        <div class="contact-wrapper">
-    
-            <!-- Contact Info Section -->
-            <div class="contact-info">
-                <h2>Get In Touch ..!!</h2>
-                <p>We’d love to hear from you! Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.</p>
-                <p><strong>📍 Address:</strong>Flöjelbergsgatan 8B - 43137 Mölndal</p>
-                <p><strong>📧 Email:</strong> info@qld.se</p>
-                <p><strong>📞 Phone:</strong> +46733783710</p>
-            </div>
+  <!-- Full-stack design & development by Eng. Ruba Nammoura -->
 
-            <!-- Contact Form -->
-            <div class="contact-container1">
-                <h2>Contact Us</h2>
-                <form action="mailto:your-info@qld.se" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="phone" name="number" placeholder="Phone Number" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <textarea name="message" placeholder="Write your message here" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
+<nav class="qld-navbar" role="navigation" aria-label="Main">
+  <div class="qld-container">
+    <a class="brand" href="index.html" aria-label="QLD home">
+      <img src="images/logo.png" alt="QLD logo" width="56" height="56" loading="lazy">
+    </a>
 
-        </div>
-    </section>
-  <section id="order1">
+    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
 
- <!-- order section-->
- <div class="order">
-    <h2>Order Now</h2>
-    <form id="shipment-form" action="#" method="POST">
-        <div class="form-group">
-            <label for="size">Parcel Volume (cubic meters)</label>
-            <input type="number" id="size" name="size" required>
-        </div>
-        <div class="form-group">
-            <label for="weight">Weight (kg)</label>
-            <input type="number" id="weight" name="weight" required>
-        </div>
-        <div class="form-group">
-            <label for="length">Length (cm)</label>
-            <input type="number" id="length" name="length" required>
-        </div>
-        <div class="form-group">
-            <label for="width">Width (cm)</label>
-            <input type="number" id="width" name="width" required>
-        </div>
-        <div class="form-group">
-            <label for="height">Height (cm)</label>
-            <input type="number" id="height" name="height" required>
-        </div>
+    <ul id="primary-menu" class="qld-menu" data-visible="false">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="index.html#qld-our-services">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Join.html">Join Us</a></li>
+    </ul>
 
-        <!-- Destination Input and Google Map -->
-        <div class="form-group">
-            <label for="destination">Destination (Choose from Map):</label>
-            <input type="text" id="destination" name="destination" placeholder="Enter or select destination from map" required>
-        </div>
-
-        <div class="map-container" id="map"></div>
-
-        <!-- Estimated Price Display -->
-        <div class="price-display" id="price-display">
-            Estimated Price: Will be calculated after entering data.
-        </div>
-
-        <!-- Payment Button (for demo purposes, here we simulate PayPal button) -->
-        <div class="payment-button">
-            <button type="button" onclick="simulatePayment()">Proceed to Payment</button>
-        </div>
-
-        <!-- Question: Individual or Company -->
-        <div class="form-group">
-            <label for="client-type">Are you an Individual or a Company?</label>
-            <select id="client-type" name="client-type" required>
-                <option value="individual">Individual</option>
-                <option value="company">Company</option>
-            </select>
-        </div>
-
-        <!-- Email for the company -->
-        <div class="form-group">
-            <label for="company-email">Company Email:</label>
-            <input type="email" id="company-email" name="company-email" value="info@qld.se" readonly required>
-        </div>
-
-        <!-- WhatsApp contact -->
-        <div class="contact-buttons">
-            <a href="https://wa.me/+46733783710" target="_blank">Contact us on WhatsApp</a>
-            <a href="mailto:info@qld.se">Send an Email</a>
-        </div>
-    </form>
-</div>
-
-<script>
-    function initMap() {
-        const location = { lat: 59.3293, lng: 18.0686 }; // إحداثيات ستوكهولم
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 10,
-            center: location,
-        });
-        const marker = new google.maps.Marker({
-            position: location,
-            map: map,
-        });
-
-        // تفاعل الخريطة لتحديد الوجهة
-        map.addListener('click', (e) => {
-            const destinationInput = document.getElementById('destination');
-            destinationInput.value = e.latLng.lat() + ', ' + e.latLng.lng();
-            marker.setPosition(e.latLng);
-        });
-    }
-
-    // تحميل مكتبة Google Maps
-    window.onload = function() {
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
-        script.async = true;
-        document.body.appendChild(script);
-    };
-
-    // دالة لحساب قيمة الطلب
-    function calculatePrice() {
-        const size = parseFloat(document.getElementById('size').value) || 0;
-        const weight = parseFloat(document.getElementById('weight').value) || 0;
-        const length = parseFloat(document.getElementById('length').value) || 0;
-        const width = parseFloat(document.getElementById('width').value) || 0;
-        const height = parseFloat(document.getElementById('height').value) || 0;
-
-        // معادلة حسابية بسيطة (يمكن تعديلها حسب الحاجة)
-        const price = (size * 10) + (weight * 5) + (length * width * height * 0.01);
-        document.getElementById('price-display').innerText = `Estimated Price: $${price.toFixed(2)}`;
-    }
-
-    // تفعيل حساب السعر عند تغيير المدخلات
-    document.querySelectorAll('.form-group input').forEach(input => {
-        input.addEventListener('input', calculatePrice);
-    });
-
-    // دالة محاكاة الدفع
-    function simulatePayment() {
-        alert('Payment simulation: Order placed successfully!');
-    }
-</script>
-
-<!-- Order & Contact Section --><section class="order-contact-section">
-  <!-- <div class="container">
-    <h2 class="section-title">Request an Order & Contact Us</h2>
-
-    <form action="https://formspree.io/f/xkgbwlvr" method="POST" class="order-form">
-      <label>Full Name</label>
-      <input type="text" name="name" placeholder="Your name" required>
-
-      <label>Email</label>
-      <input type="email" name="email" placeholder="Your email" required>
-
-      <label>Phone Number</label>
-      <input type="text" name="phone" placeholder="Your phone number">
-
-      <label>Package Type</label>
-      <select name="package_type" required>
-        <option value="" disabled selected>Select package type</option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
-
-      <label>Approximate Weight (kg)</label>
-      <input type="number" name="weight" placeholder="Weight in kg" required>
-
-      <label>Additional Notes</label>
-      <textarea name="notes" rows="3" placeholder="Any special instructions..."></textarea>
-
-      <button type="submit" class="submit-btn">Submit Request</button>
-    </form>
-
-    <div class="map-section">
-      <label>Route Selection</label>
-      <div id="map" style="height: 320px; border-radius: 12px; border: 1px solid #ddd; margin-top: 10px;"></div>
-      <p class="map-note">Click on the map to select Start and Destination points</p>
-      <input type="hidden" name="start_point" id="start_point">
-      <input type="hidden" name="end_point" id="end_point">
-
-      <button onclick="calculateCost()" class="estimate-btn">Estimate Cost</button>
-
-      <p><strong>Estimated Distance:</strong> <span id="distance_km">0</span> km</p>
-      <p><strong>Estimated Cost:</strong> <span id="estimated_cost">0</span> SEK</p>
-    </div>
-
-    <div class="contact-buttons">
-      <a href="tel:+46701234567" class="call-btn">Call Us</a>
-      <a href="https://wa.me/46701234567" target="_blank" class="whatsapp-btn">WhatsApp</a>
-    </div>
   </div>
-</section> -->
+</nav>
 
-<style>
-  .order-contact-section {
-    display: contents;
-    padding: 50px 20px;
-    background: #f3f4f6;
-    font-family: Arial, sans-serif;
-  }
-  .container {
-    display: block;
-    max-width: 700px;
-    margin: auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  }
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 25px;
-    font-weight: 700;
-  }
-  form label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-  }
-  form input, form select, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    box-sizing: border-box;
-  }
-  .submit-btn {
-    margin-top: 25px;
-    background-color: #059669;
-    color: white;
-    padding: 12px;
-    border: none;
-    width: 100%;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 700;
-  }
-  .submit-btn:hover {
-    background-color: #047857;
-  }
-  .map-section {
-    margin-top: 40px;
-  }
-  .map-note {
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 10px;
-  }
-  .estimate-btn {
-    margin-top: 20px;
-    background-color: #3b82f6;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  .estimate-btn:hover {
-    background-color: #2563eb;
-  }
-  .contact-buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-  }
-  .call-btn, .whatsapp-btn {
-    flex: 1;
-    text-align: center;
-    background-color: #f59e0b;
-    color: white;
-    padding: 12px;
-    border-radius: 10px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  .call-btn:hover {
-    background-color: #b45309;
-  }
-  .whatsapp-btn {
-    background-color: #22c55e;
-  }
-  .whatsapp-btn:hover {
-    background-color: #15803d;
-  }
-</style>
+    <section id="contactpageHero" class="contactpage-hero">
 
-<!-- Leaflet CSS & JS -->
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet/dist/leaflet.css"
-/>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <div class="contactpage-hero-inner reveal-zoom">
+    <h1>Get In Touch</h1>
+    <p>
+      We’d love to hear from you! Whether you have a question about features,
+      pricing, or anything else, our team is ready to answer all your questions.
+    </p>
+  </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let map = L.map('map').setView([59.3293, 18.0686], 10);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+  <div class="contactpage-orb orb1"></div>
+  <div class="contactpage-orb orb2"></div>
 
-    let points = [];
+</section>
 
-    map.on('click', function(e) {
-      if (points.length < 2) {
-        const marker = L.marker(e.latlng).addTo(map);
-        points.push(e.latlng);
-        if (points.length === 1) {
-          document.getElementById('start_point').value = `${e.latlng.lat},${e.latlng.lng}`;
-        } else {
-          document.getElementById('end_point').value = `${e.latlng.lat},${e.latlng.lng}`;
-        }
-      } else {
-        alert('You already selected start and end points.');
-      }
-    });
+<section id="contactpageInfo" class="contactpage-info">
 
-    window.calculateCost = function () {
-      if (points.length < 2) {
-        alert('Please select both points on the map.');
-        return;
-      }
-      const R = 6371; // Radius of Earth in km
-      const dLat = (points[1].lat - points[0].lat) * Math.PI / 180;
-      const dLon = (points[1].lng - points[0].lng) * Math.PI / 180;
-      const a = Math.sin(dLat / 2) ** 2 +
-                Math.cos(points[0].lat * Math.PI / 180) *
-                Math.cos(points[1].lat * Math.PI / 180) *
-                Math.sin(dLon / 2) ** 2;
-      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-      const distance = R * c;
-      const rounded = distance.toFixed(1);
-      document.getElementById('distance_km').innerText = rounded;
-      document.getElementById('estimated_cost').innerText = (50 + distance * 7).toFixed(2);
-    };
-  });
-</script>
+  <div class="contactpage-info-grid">
 
+    <div class="contactpage-info-card reveal-left">
+      📍
+      <h3>Address</h3>
+      <p>Flöjelbergsgatan 8B<br>43137 Mölndal</p>
+    </div>
 
+    <div class="contactpage-info-card reveal-zoom">
+      📧
+      <h3>Email</h3>
+      <p>info@qld.se</p>
+    </div>
 
+    <div class="contactpage-info-card reveal-right">
+      📞
+      <h3>Phone</h3>
+      <p>+46 733 783 710</p>
+    </div>
 
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+</section>
 
-              <!--title -->
-              <div>
-                <h2> Your best choice ..!</h2>
-            </div>
-            <!-- icons-->
-            <div class="footer-icons">
-                <a href="https://wa.me/+46 733783710" target="_blank" class="icon-link">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.facebook.com/people/QLD-AB/61567075727558/" target="_blank" class="icon-link">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/qld2024?igsh=amc1OXR1NzkwaXA3" target="_blank" class="icon-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="tel:+4673-3783710" class="icon-link">
-                    <i class="fas fa-phone"></i>
-                </a>
-                <a href="mailto:nfo@qld.se" class="icon-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-    
-          
-    
-            <!-- information-->
-            <div class="footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Flöjelbergsgatan 8B - 43137 Mölndal</p>
-                <p><i class="fas fa-phone"></i> +4673-3783710</p>
-            </div>
-    
-            <!-- @-->
-            <div>
-                <p>© 2025 QLD - All Rights Reserved</p>
-                <!-- <p style="opacity: 0.75;">Full-stack design & development by Eng. Ruba Nammoura</p> -->
-            </div>
+<section id="qldEstimator" class="qld-estimator">
+
+  <div class="qld-estimator-card reveal-zoom">
+
+    <h2>Transport Cost Estimator</h2>
+    <p class="qld-estimator-sub">
+      Get an instant estimated transport cost based on shipment details.
+      Final pricing will be confirmed by our logistics team.
+    </p>
+
+    <div class="qld-estimator-grid">
+
+      <!-- FORM -->
+      <div class="qld-form">
+
+        <div class="qld-field">
+          <label>Weight (kg)</label>
+          <input type="number" id="qldWeight" placeholder="e.g. 300">
         </div>
-    </footer>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <script src="script.js"></script>
+        <div class="qld-field">
+          <label>Volume (m³)</label>
+          <input type="number" id="qldVolume" placeholder="e.g. 4.5">
+        </div>
+
+        <div class="qld-field split">
+          <div>
+            <label>Pickup City</label>
+            <input type="text" id="qldFrom" placeholder="e.g. Göteborg">
+          </div>
+          <div>
+            <label>Delivery City</label>
+            <input type="text" id="qldTo" placeholder="e.g. Stockholm">
+          </div>
+        </div>
+
+        <div class="qld-field">
+          <label>Client Type</label>
+          <select id="qldClient">
+            <option value="individual">Individual</option>
+            <option value="company">Company</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- RESULT -->
+      <div class="qld-result">
+        <span>Estimated Cost</span>
+        <h3 id="qldPrice">0 SEK</h3>
+        <p class="qld-note">
+          * Estimated price based on distance category & shipment data
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="qld-actions">
+      <a
+        id="qldWhatsapp"
+        href="https://wa.me/46733783710"
+        target="_blank"
+        class="qld-btn whatsapp">
+        WhatsApp
+      </a>
+
+      <a
+        id="qldOrder"
+        href="mailto:info@qld.se"
+        class="qld-btn order">
+        Order Now
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contactpageFormMap" class="contactpage-formmap">
+
+  <div class="contactpage-form reveal-left">
+    <h2>Send Us a Message</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="phone" name="number" placeholder="Phone Number" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="contactpage-map reveal-right">
+    <iframe
+      src="https://maps.google.com/maps?q=Flöjelbergsgatan%208B%2043137%20Mölndal&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      loading="lazy"></iframe>
+  </div>
+
+</section>
+<a href="tel:+46733783710" class="contactpage-call-btn">
+  📞 Call Us
+</a>
+
+
+
+
+
+
+<footer class="footer reveal-footer">
+
+  <div class="footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-section footer-brand">
+      <h3>QLD Group</h3>
+      <p class="brand-tagline">Innovation • Precision • Future</p>
+      <p class="brand-desc">
+        Building sustainable and reliable transport & logistics solutions
+        across Sweden.
+      </p>
+    </div>
+
+    <!-- EXPLORE -->
+    <div class="footer-section">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="contact.html#qld-our-services">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="#qldEstimator">Order</a>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>📧 info@qld.se</p>
+      <p>📞 +46 73 378 37 10</p>
+      <p>📍 Mölndal, Sweden</p>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/people/QLD-AB/61567075727558/" class="social facebook" data-tooltip="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social twitter" data-tooltip="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/qld2024/?igsh=amc1OXR1NzkwaXA3#" class="social instagram" data-tooltip="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="social linkedin" data-tooltip="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <p class="copy">© 2025 QLD Group. All Rights Reserved.</p>
+
+</footer>
+
+
+
+<script src="js/app.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initQLDMap"></script>
+
 </body>
 </html>

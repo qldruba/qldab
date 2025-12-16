@@ -1,489 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="company" />
-    <meta name="author" content="qld" />
-    <meta name="theme-color" content="#000000">
-    <meta name="format-detection" content="telephone=no">
-    
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="images/logo22.png" />
-
-    <!-- Bootstrap Icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-    <!-- SimpleLightbox plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-    <title>	QLD AB </title>
-    <!-- Google Analytics-->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1HNW45YYW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-D1HNW45YYW');
-    </script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="QLD - transforms - logistic - smart solutions" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="images/logo.png" />
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-
-
-            <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'ar,sv',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                }, 'google_translate_element');
-            }
-            window.addEventListener('scroll', () => {
-  const title = document.querySelector('.shiny-title');
-  const section = document.querySelector('.highlighted-images');
-  const sectionTop = section.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-
-  if (sectionTop < windowHeight - 100) {
-    title.style.animationPlayState = 'running';
-  }
-});
-            </script>
-
-            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-Gt3cFtYUGkcFUYKrElhpJmVsy9OCHP0&libraries=places&callback=initAutocomplete" async defer></script>
-
-
+<title>QLD AB</title>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+  <!-- Full-stack design & development by Eng. Ruba Nammoura -->
 
-        <!-- Google Translate Button -->
-        <div id="google_translate_element" style="position: absolute; top: 15px; right: 20px; z-index: 999;"></div>
-         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo22.png" alt="Company Logo">
-                </a>
-            </div>
+<nav class="qld-navbar" role="navigation" aria-label="Main">
+  <div class="qld-container">
+    <a class="brand" href="index.html" aria-label="QLD home">
+      <img src="images/logo.png" alt="QLD logo" width="56" height="56" loading="lazy">
+    </a>
 
-            <ul>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="join.html">Join Us</a></li>
-                </ul>
-                <button class="menu-toggle">☰</button>
-            </ul>
-        </nav>
-    </header>
- 
-    <!-- Hero Section -->
-    <section id="home">
-        <div class="hero">
-            <video autoplay loop muted>
-                <source src="images/intro.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
-    
-    
+    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
 
-    <!-- Intro Section -->
-        <section class="intro">
-            <div class="intro-text">
-                <h1>Welcome to Our website</h1>
-                <p>Welcome to our digital world! We hope you have a fantastic experience.</p>
-                <p>Your Reliable Transport Partner .</p>
-                <P>QLD Group is the parent company of a network of transportation companies, managing and operating several subsidiaries to provide reliable, integrated transport and logistics solutions</P>
-            </div>
-            <div class="intro-image">
-                <img src="images/mainlogo.jpg" alt="Intro Image">
-            </div>
-        </section>
+    <ul id="primary-menu" class="qld-menu" data-visible="false">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#qld-our-services">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Join.html">Join Us</a></li>
+    </ul>
 
-        <!-- Image Cards Section -->
-        <section class="highlighted-images">
-        <h2 class="shiny-title">SMART SOLUTION</h2>
+  </div>
+</nav>
 
-        <div class="image-card">
-            <img src="images/highlight1.jpg" alt="Fleet of QLD Vehicles">
-            <div class="caption">Our Modern Fleet</div>
-        </div>
+<section id="home" class="hero-section">
+  <video
+    class="hero-video"
+    poster="images/hero3.jpg"
+    muted
+    loop
+    playsinline
+    preload="none"
+    aria-hidden="true"
+  >
+    <source data-src="images/intro.mp4" type="video/mp4">
+  </video>
 
-        <div class="image-card">
-            <img src="images/highlight2.jpg" alt="QLD Logistics Hub">
-            <div class="caption">Powering Global Logistics</div>
-        </div>
-        </section>
+  <div class="hero-layer">
+    <div class="hero-content">
+      <h1 class="reveal" data-parallax="-0.08">QLD AB — Smart Solution </h1>
+      <p class="lead reveal" data-parallax="-0.05">Smart, scalable transport & logistics solutions from Sweden , built for global growth.</p>
 
-
-
-
-
-    <!-- Video Section
-      <section class="video-section">
-        <div class="video-overlay">
-            <div class="video-text">
-                <img src="images/logo.png" alt="Company Logo">
-                <h1>Company Name</h1>
-                <p>Your tagline here</p> --> 
-        <!--   </div>
-        </div>
-        <video autoplay loop muted>
-            <source src="images/video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section> --> 
-
-    <!-- About Us Section -->
-    <section id="about">
-        <h1>About Us</h1>
-        <div class="about-content">
-            <img src="images/logo22.png" alt="About Us Image">
-            <p>​Our company has a rich history, built on dedication, hard work, and a commitment to excellence. We started as a small business and over the years have grown into a trusted name in the industry. Our journey is one of perseverance and success..</p>
-                <br>
-    
-            <a href="about.html" class="read-more">Read More</a>
-        </div>
-    </section>
-
-    <section id="videoSection44" class="video-section44">
-    <div class="container44">
-        <h2 class="section-title44"> Efficient. Reliable. Fast. This Is How We Ship
-
-    </h2>
-        <div class="video-wrapper44">
-        <div class="video-container44" data-title="Box">
-            <img class="video-thumb44" src="images/box-img.jpg" alt="video preview">
-            <button class="play-btn44">▶</button>
-            <video class="hidden44">
-            <source src="images/boxvid.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="video-container44" data-title="Pallet">
-            <img class="video-thumb44" src="images/pallet-img.jpeg" alt="video preview">
-            <button class="play-btn44">▶</button>
-            <video class="hidden44">
-            <source src="images/palletvid.mp4" type="video/mp4">
-            </video>
-        </div>
-        </div>
+      <div class="hero-actions reveal" data-parallax="-0.03">
+        <a class="btn btn-primary" href="#services">Explore Services</a>
+        <a class="btn btn-glass" href="#join">Join QLD</a>
+      </div>
     </div>
 
-        <!-- Lightbox overlay -->
-        <div id="videoOverlay44" class="video-overlay44 hidden44">
-            <div class="overlay-content44">
-            <button id="closeOverlayBtn44" class="close-btn44">×</button>
-            <h3 id="overlayTitle44" class="overlay-title44"></h3>
-            <video id="expandedVideo44" controls autoplay class="expanded-video44"></video>
-            </div>
-        </div>
-        </section>
-
-
-<!-- ===================== QLD Intro Video Section (vid-intro-logo44) ===================== -->
-<section class="vid-intro-logo44" id="vid-intro-logo44" aria-label="Brand intro video">
-  <div class="vid-intro-logo44__wrap">
-    <!-- Overlay Title -->
-    <div class="vid-intro-logo44__overlay">
-      <h2 class="vid-intro-logo44__title">
-        <span class="vid-intro-logo44__title-strong">Driven by Trust,</span>
-        <span class="vid-intro-logo44__title-soft">Powered by Excellence</span>
-      </h2>
-    </div>
-
-    <!-- The Video -->
-    <video
-      class="vid-intro-logo44__video"
-      playsinline
-      autoplay
-      muted
-      loop
-      preload="metadata"
-    >
-      <source src="images/vid-l-i.mp4" type="video/webm" />
-      <source src="images/vid-l-i.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <div class="floating f1" data-parallax="0.06" aria-hidden="true"></div>
+    <div class="floating f2" data-parallax="0.12" aria-hidden="true"></div>
   </div>
 </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <section id="ser">
-            <div class="text_ser1">
-                <h1> Our Services </h1>
-            </div>
+<section id="welcome-section" class="welcome-section" aria-labelledby="welcome-title">
+  <div class="welcome-container" dir="ltr">
+    <div class="welcome-content reveal" data-parallax="-0.04" aria-hidden="false">
+      <h2 id="welcome-title" class="sparkle-title">Welcome to Our website</h2>
+      <p class="welcome-sub">Welcome to our digital world! We hope you have a fantastic experience.</p>
+      <p class="welcome-tagline">Your Reliable Transport Partner.</p>
+      <p class="welcome-desc">
+        <strong>QLD Group</strong> is the parent company of a network of transportation companies,
+        managing and operating several subsidiaries to provide reliable, integrated transport and logistics solutions.
+      </p>
 
-            <div class="ser-container">
-                <div class="serv">
-                    <img src="images/serv1.webp" alt="Service 1">
-                    <h3>For Companies</h3>
-                    <p>We offer a range of specialized services tailored to meet your company needs.</p>
-                    
-                    <a href="serv1.html" class="read-more">Read More</a>
-                    
-                </div>
-                <div class="serv">
-                    <img src="images/serv2.webp" alt="Service 2">
-                    <h3>For Individuals</h3>
-                    <p>We offer a range of specialized services tailored to meet your individual needs.</p>
-        
-                    <a href="serv1.html" class="read-more">Read More</a>
-                
-                </div>
-                <div class="serv">
-                    <img src="images/serv3.webp" alt="Service 3">
-                    <h3>Special Körning</h3>
-                    <p>We offer you a special körning between 6:00 ock .... 18:00 ock with a competitive prices .
+   
+    </div>
 
-                    </p>
-                    <a href="serv3.html" class="read-more">Read More</a>
-       
-                </div>
-            </div>
-    </section>
-
-
-
-       <div class="text_ser">
-        <h1>Our Fleet</h1></br>
-        <p>Fully equipped fleet of cars with advanced cooling and heating systems, ranging from (-10 to +25 degrees Celsius),
-             
-            
-            
-            in addition to a team of professional drivers to ensure safe and fast deliveries for you.</p>
+    <div class="welcome-media reveal" data-parallax="0.06" aria-hidden="true">
+      <div class="media-frame" role="img" aria-label="Company overview image">
+        <img src="images/mainlogo.jpg" alt="QLD Group overview" width="420" height="420" loading="lazy">
       </div>
-     <!-- Gallery Section -->
-    <section id="gallery2">
-            <div class="gallery-container">
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="images/Bodbil-page1.webp" alt="logistics">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/lastbil-page2.webp" alt="logistics">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/Menigo.jpg" alt="logistics">
-                    </div>
-                </div>
-                <button class="prev-btn45">&#10094;</button>
-                <button class="next-btn45">&#10095;</button>
-            </div>
-            </section>
-            <div class="services-container">
-                <div class="service">
-                    <img src="images/service1.jpg" alt="Service 1">
-                    <h3>last bil</h3>
-                    <p>The "Last bil" vehicle provision service offers comprehensive solutions for freight transportation through a fleet of trucks. This service focuses on meeting the transportation needs of companies efficiently and safely.   </p>
-                    
-                    <a href="service1.html" class="read-more">Read More</a>
-                    
-                </div>
-                <div class="service">
-                    <img src="images/service2.webp" alt="Service 2">
-                    <h3> lätt last bil</h3>
-                    <p>​The "Lätt last bil" vehicle provision service offers flexible and suitable solutions for transporting goods using small trucks. This service focuses on meeting the transportation needs of companies and individuals efficiently and easily.</p>
-        
-                    <a href="service2.html" class="read-more">Read More</a>
-                
-                </div>
-                <div class="service">
-                    <img src="images/service3.webp" alt="Service 3">
-                    <h3>Budbil </h3>
-                    <p>The "Budbil" vehicle provision service offers comprehensive solutions for transporting goods using closed-box trucks. This service focuses on meeting the transportation needs of companies and individuals safely and effectively.</p>
-                    <a href="service3.html" class="read-more">Read More</a>
-    
-                </div>
-            </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-        <!-- Prism Carousel Section -->
-        <section id="prism-moshour-section" class="prism-moshour-container">
-        <div class="prism-moshour-wrapper">
-            <div class="prism-moshour-face prism-moshour-face1">
-            <img src="images/cu.jpg" alt="Slide 1">
-            </div>
-            <div class="prism-moshour-face prism-moshour-face2">
-            <img src="images/cy.jpg" alt="Slide 2">
-            </div>
-            <div class="prism-moshour-face prism-moshour-face3">
-            <img src="images/cub6.jpg" alt="Slide 3">
-            </div>
+<section id="about-preview" class="about-preview">
+  <video class="about-video" autoplay muted loop playsinline>
+    <source src="images/vid-l-i.mp4" type="video/mp4">
+  </video>
+
+  <div class="about-overlay"></div>
+
+  <div class="about-content reveal">
+    <div class="about-card">
+      <h2>About Us</h2>
+      <p>
+        Our company has a rich history, built on dedication, hard work, and a commitment to excellence.
+        We started as a small business and over the years have grown into a trusted name in the industry.
+        Our journey is one of perseverance and success.
+      </p>
+      <a href="about.html" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
+
+  <div class="floating f1"></div>
+  <div class="floating f2"></div>
+</section>
+
+
+<section id="smart-solution-section" class="smart-solution-section">
+  <div class="smart-solution-container">
+    <!-- Title -->
+    <h2 class="smart-solution-title sparkle-text">SMART SOLUTION</h2>
+
+    <!-- Fleet and Logistics -->
+    <div class="fleet-logistics">
+      <div class="fleet-item reveal">
+        <img src="images/highlight1.jpg" alt="Our Modern Fleet" class="fleet-image">
+        <h3 class="fleet-title">Our Modern Fleet</h3>
+        <p class="fleet-desc">Powering Global Logistics</p>
+      </div>
+      <div class="fleet-item reveal">
+        <img src="images/highlight2.jpg " alt="Our Modern Fleet 2" class="fleet-image">
+        <h3 class="fleet-title">Our Modern Fleet</h3>
+        <p class="fleet-desc">Powering Global Logistics</p>
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="smart-video-section">
+      <div class="video-card reveal">
+        <h3 class="video-title">Efficient. Reliable. Fast.</h3>
+        <p class="video-subtitle">This Is How We Ship</p>
+        <div class="video-wrapper">
+          <video class="smart-video" preload="metadata" muted>
+            <source src="images/boxvid.mp4" type="video/mp4">
+          </video>
+          <div class="video-controls">
+            <button class="play-btn">▶️</button>
+            <button class="mute-btn">🔇</button>
+          </div>
         </div>
-        </section>
+      </div>
+
+      <div class="video-card reveal">
+        <h3 class="video-title">Efficient. Reliable. Fast.</h3>
+        <p class="video-subtitle">This Is How We Ship</p>
+        <div class="video-wrapper">
+          <video class="smart-video" preload="metadata" muted>
+            <source src="images/palletvid.mp4" type="video/mp4">
+          </video>
+          <div class="video-controls">
+            <button class="play-btn">▶️</button>
+            <button class="mute-btn">🔇</button>
+          </div>
+        </div>
+      </div>
+    </div>
+          <div class="floating f1" data-parallax="0.06" aria-hidden="true"></div>
+    <div class="floating f2" data-parallax="0.12" aria-hidden="true"></div>
+  </div>
+
+</section>
 
 
-            <!-- Scrolling Image Section with Click-to-Open -->
-            <section>
-            <div class="image-marquee">
-                <div class="image-track">
-                <a href="images/order byruba2.jpg" target="_blank">
-                    <img src="images/order byruba2.jpg" alt="">
-                </a>
-                <a href="images/imgorder1.jpeg.jpg" target="_blank">
-                    <img src="images/imgorder1.jpeg.jpg" alt="logistics">
-                </a>
-                <a href="images/order4.jpg" target="_blank">
-                    <img src="images/order4.jpg" alt="">
-                </a>
-                <a href="images/orderworld.jpg" target="_blank">
-                    <img src="images/orderworld.jpg" alt="logistics">
-                </a>
-                <a href="images/rubaimg6.jpeg.jpg" target="_blank">
-                    <img src="images/rubaimg6.jpeg.jpg" alt="logistics">
-                </a>
-                <a href="images/rubaimg7.jpeg.jpg" target="_blank">
-                    <img src="images/rubaimg7.jpeg.jpg" alt="">
-                </a>
-                <a href="images/rubaimg8.jpeg.jpg" target="_blank">
-                    <img src="images/rubaimg8.jpeg.jpg" alt="logistics">
-                </a>
-                <a href="images/rubaimg9.jpeg.jpg" target="_blank">
-                    <img src="images/rubaimg9.jpeg.jpg" alt="logistics">
-                </a>
-                <a href="images/rubaimg10.jpeg.jpg" target="_blank">
-                    <img src="images/rubaimg10.jpeg.jpg" alt="logistics">
-                </a>
-                <a href="images/rubaimg11.jpeg.jpg" target="_blank">
-                    <img src="images/rubaimg11.jpeg.jpg" alt="logistics">
-                </a>
-                </div>
-            </div>
-            </section>
+<section id="qld-our-services" class="qld-services-section">
+  <div class="qld-container">
+    <h2 class="qld-services-title sparkle-title">Our Services</h2>
+  </div>
+    <div class="qld-services-cards">
+      <!-- Card 1 -->
+      <div class="qld-service-card reveal-from-left">
+        <div class="qld-service-img">
+          <img src="images/serv1.webp" alt="For Companies" loading="lazy">
+        </div>
+        <div class="qld-service-content">
+          <h3>For Companies</h3>
+          <p>We offer a range of specialized services tailored to meet your company needs.</p>
+          <a href="serv1.html" class="btn btn-primary qld-service-btn">Read More</a>
+        </div>
+      </div>
 
-    <!-- Contact Us Section -->
-    <section id="contact">
-        
-  			<div class="cube-wrapper6" id="Cube6">
+      <!-- Card 2 -->
+      <div class="qld-service-card reveal-from-bottom">
+        <div class="qld-service-img">
+          <img src="images/serv2.webp" alt="For Individuals" loading="lazy">
+        </div>
+        <div class="qld-service-content">
+          <h3>For Individuals</h3>
+          <p>We offer a range of specialized services tailored to meet your individual needs.</p>
+          <a href="serv1.html" class="btn btn-primary qld-service-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="qld-service-card reveal-from-right">
+        <div class="qld-service-img">
+          <img src="images/serv3.webp" alt="Special Körning" loading="lazy">
+        </div>
+        <div class="qld-service-content">
+          <h3>Special Körning</h3>
+          <p>We offer you a special körning between 6:00 ock and 18:00 ock with competitive prices.</p>
+          <a href="serv3.html" class="btn btn-primary qld-service-btn">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="floating f1" data-parallax="0.06" aria-hidden="true"></div>
+    <div class="floating f2" data-parallax="0.12" aria-hidden="true"></div>
+</section>
+
+<section id="qld-fleet-section" class="qld-fleet-section">
+  <div class="qld-fleet-container">
+    <h2 class="qld-fleet-title reveal">Our Fleet</h2>
+    <p class="qld-fleet-text">
+      Fully equipped fleet of cars with advanced cooling and heating systems, 
+      ranging from (-10 to +25 degrees Celsius), in addition to a team of professional 
+      drivers to ensure safe and fast deliveries for you.
+    </p>
+
+    <div class="qld-fleet-slider">
+      <div class="qld-fleet-slide active"><img src="images/lastbil-page2.webp" alt="Fleet Image 1" loading="lazy"></div>
+      <div class="qld-fleet-slide"><img src="images/Bodbil-page1.webp" alt="Fleet Image 2" loading="lazy"></div>
+      <div class="qld-fleet-slide"><img src="images/Menigo.jpg" alt="Fleet Image 3" loading="lazy"></div>
+      <!-- <div class="qld-fleet-slide"><img src="fleet4.jpg" alt="Fleet Image 4"></div>
+      <div class="qld-fleet-slide"><img src="fleet5.jpg" alt="Fleet Image 5"></div> -->
+    </div>
+  </div>
+</section>
+
+
+<section id="xcl-vehicle-services" class="xcl-vehicle-section">
+  <div class="xcl-container">
+
+    <h2 class="xcl-main-title xcl-reveal">Our Vehicle Services</h2>
+
+    <div class="xcl-card-wrapper">
+
+      <!-- Card 1 -->
+      <div class="xcl-card xcl-reveal">
+        <div class="xcl-card-img">
+          <img src="images/service1.jpg" alt="Last Bil Service" loading="lazy">
+        </div>
+        <div class="xcl-card-body">
+          <h3>Last bil</h3>
+          <p>
+            The "Last bil" vehicle provision service offers comprehensive solutions for freight
+            transportation through a fleet of trucks. This service focuses on meeting the 
+            transportation needs of companies efficiently and safely.
+          </p>
+          <a href="service1.html" class="xcl-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="xcl-card xcl-reveal">
+        <div class="xcl-card-img">
+          <img src="images/service2.webp" alt="Lätt last bil Service" loading="lazy">
+        </div>
+        <div class="xcl-card-body">
+          <h3>lätt last bil</h3>
+          <p>
+            The "Lätt last bil" vehicle provision service offers flexible solutions for transporting 
+            goods using small trucks. This service focuses on meeting the transportation needs of 
+            companies and individuals efficiently and easily.
+          </p>
+          <a href="service2.html" class="xcl-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="xcl-card xcl-reveal">
+        <div class="xcl-card-img">
+          <img src="images/service3.webp" alt="Budbil Service" loading="lazy">
+        </div>
+        <div class="xcl-card-body">
+          <h3>Budbil</h3>
+          <p>
+            The "Budbil" vehicle provision service offers comprehensive solutions for transporting 
+            goods using closed-box trucks. This service focuses on meeting transportation needs 
+            for companies and individuals safely and effectively.
+          </p>
+          <a href="service3.html" class="xcl-btn">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="qld-horizontal-ads">
+  <div class="qld-ads-container">
+    <div class="qld-ads-track">
+      <img src="images/order byruba2.jpg" loading="lazy">
+      <img src="images/imgorder1.jpeg.jpg" loading="lazy">
+      <img src="images/order4.jpg" loading="lazy">
+      <img src="images/orderworld.jpg" loading="lazy">
+      <img src="images/rubaimg6.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg7.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg8.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg11.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg9.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg10.jpeg.jpg" loading="lazy">
+
+      <!-- for infinity loop -->
+      <img src="images/order byruba2.jpg" loading="lazy">
+      <img src="images/imgorder1.jpeg.jpg" loading="lazy">
+      <img src="images/order4.jpg" loading="lazy">
+      <img src="images/orderworld.jpg" loading="lazy">
+      <img src="images/rubaimg6.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg7.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg8.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg11.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg9.jpeg.jpg" loading="lazy">
+      <img src="images/rubaimg10.jpeg.jpg" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="qld-lightbox">
+    <span id="qld-lightbox-close">&times;</span>
+    <img id="qld-lightbox-img" src="">
+  </div>
+
+
+    <div class="cube-wrapper6" id="Cube6">
 			<div class="cube6">
-				<div class="face6 front6"><img src="images/cub1.jpg" alt="logistics 1"></div>
-				<div class="face6 back6"><img src="images/cub2.jpg" alt="Logistics 2"></div>
-				<div class="face6 right6"><img src="images/cub3.jpg" alt="Logistics 3"></div>
-				<div class="face6 left6"><img src="images/cub4.jpg" alt="Logistics 4"></div>
-				<!-- <div class="face6 top6"><img src="images/cub5.jpg" alt="Logistics 5"></div>
-				<div class="face6 bottom6"><img src="images/cub6.jpg" alt="Logistics 6"></div> -->
+				<div class="face6 front6"><img src="images/cub1.jpg" alt="logistics 1" loading="lazy"></div>
+				<div class="face6 back6"><img src="images/cub2.jpg" alt="Logistics 2" loading="lazy"></div>
+				<div class="face6 right6"><img src="images/cub3.jpg" alt="Logistics 3" loading="lazy"></div>
+				<div class="face6 left6"><img src="images/cub4.jpg" alt="Logistics 4" loading="lazy"></div>
+				
 			</div>
 			</div>
-        <div class="contact_text">
-        <h1>Let's Get In Touch!</h1>
-        <h2>Contact Us</h2>
-                   <!-- icons-->
-                   <div class="footer-icons">
-                    <a href="https://wa.me/+46 733783710" target="_blank" class="icon-link">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.facebook.com/https://www.facebook.com/people/QLD-AB/61567075727558/" target="_blank" class="icon-link">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fqld2024%2F%3Fnext%3D%252F&is_from_rle" target="_blank" class="icon-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="tel:+4673-3783710" class="icon-link">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                    <a href="mailto:nfo@qld.se" class="icon-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-        </div>
-        <div class="contact-container1">
-            <form action="mailto:your-info@qld.se" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Full Name" data-sb-validations="required">
-                <input type="phone" name="number" placeholder="Phone Number" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <textarea name="message" placeholder="Enter your message here..." required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-         
-       
-            <div class="contact-info">
+  <div id="qldLightbox" class="qld-lightbox">
+  <span class="qld-lightbox-close">&times;</span>
+  <img class="qld-lightbox-img" src="" alt="">
 
-            <p>
-                This is where our journey begins. Get to know our business and what we do, and how we're committed to quality and great service. Join us as we grow and succeed together. We're glad you're here to be a part of our story.
-            </p>
-                
+</section>
+
+<!-- Contact Section -->
+<section id="qld-contact-section" class="qld-contact-section">
+  <div class="qld-contact-container">
+    <h2 class="qld-contact-title">Get in Touch</h2>
+    <div class="qld-contact-content">
+      
+      <!-- Form Left -->
+      <form id="qld-contact-form" class="qld-contact-form reveal-from-left">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="phone" name="number" placeholder="Phone Number" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      
+      <!-- Map Right -->
+      <div class="qld-contact-map reveal-from-right">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.349832817815!2d12.010185116066045!3d57.67409398166692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4651a1f7d93b2c31%3A0x123456789abcdef!2sFl%C3%B6jelbergsgatan%208B%2C%2043137%20M%C3%B6lndal!5e0!3m2!1sen!2sse!4v1701000000000!5m2!1sen!2sse"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
 
-                <div id="tell">
-                    <div id="tell1">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+46733783710</div>
-                    </div>
-                </div>
-                <p><strong>📍 Address:</strong>Flöjelbergsgatan 8B - 43137 Mölndal</p>
-                <p><strong>📧 Email:</strong> info@qld.se</p>
-            </div>
 
-        </div>
-    </section>
+<footer class="footer reveal-footer">
 
-    <!-- Map Section -->
-    <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d832.696052078287!2d12.0208349!3d57.6482215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff35a4a9c9c9d%3A0x8c8c8c8c8c8c8c8c!2sFl%C3%B6jelbergsgatan%208B%2C%2043137%20M%C3%B6lndal%2C%20Sweden!5e0!3m2!1sen!2sse!4v1616161616161!5m2!1sen!2sse" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+  <div class="footer-grid">
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <!-- BRAND -->
+    <div class="footer-section footer-brand">
+      <h3>QLD Group</h3>
+      <p class="brand-tagline">Innovation • Precision • Future</p>
+      <p class="brand-desc">
+        Building sustainable and reliable transport & logistics solutions
+        across Sweden.
+      </p>
+    </div>
 
-              <!--title -->
-              <div>
-                <h2> Your best choice ..!</h2>
-            </div>
-            <!-- icons-->
-            <div class="footer-icons">
-                <a href="https://wa.me/+46 733783710" target="_blank" class="icon-link">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.facebook.com/people/QLD-AB/61567075727558/" target="_blank" class="icon-link">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/qld2024?igsh=amc1OXR1NzkwaXA3" target="_blank" class="icon-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="tel:+4673-3783710" class="icon-link">
-                    <i class="fas fa-phone"></i>
-                </a>
-                <a href="mailto:nfo@qld.se" class="icon-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-    
-          
-    
-            <!-- information-->
-            <div class="footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Flöjelbergsgatan 8B - 43137 Mölndal</p>
-                <p><i class="fas fa-phone"></i> +4673-3783710</p>
-            </div>
-    
-            <!-- @-->
-            <div>
-                <p>© 2025 QLD - All Rights Reserved</p>
-                <!-- <p style="opacity: 0.75;">Full-stack design & development by Eng. Ruba Nammoura</p> -->
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- EXPLORE -->
+    <div class="footer-section">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="#qld-our-services">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="contact.html#qldEstimator">Order</a>
 
-    <script src="script.js"></script>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>📧 info@qld.se</p>
+      <p>📞 +46 73 378 37 10</p>
+      <p>📍 Mölndal, Sweden</p>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/people/QLD-AB/61567075727558/" class="social facebook" data-tooltip="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social twitter" data-tooltip="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/qld2024/?igsh=amc1OXR1NzkwaXA3#" class="social instagram" data-tooltip="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="social linkedin" data-tooltip="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <p class="copy">© 2025 QLD Group. All Rights Reserved.</p>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initQLDMap"></script>
+
 </body>
 </html>
