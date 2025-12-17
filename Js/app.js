@@ -24,7 +24,7 @@
   })();
 
   /* ===========================
-     Mobile nav (no overlay)
+     Mobile nav (no overlay)h
      =========================== */
   (function mobileNavNoOverlay() {
     const menuToggle = q('.menu-toggle');
